@@ -1,0 +1,2699 @@
+[
+  {
+    "role": "Tank",
+    "name": "D.Va",
+    "url": "https://overwatch.fandom.com/wiki/D.Va",
+    "weapons": [
+      {
+        "name": "Fusion Cannons",
+        "effect_type": "Shotgun (hitscan)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "2 – 0.6 (per projectile) 22 - 6.6 (per volley)"
+        },
+        "falloff_range": "10 - 20 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "6.67 volleys/s",
+        "shots_per_volley": "11",
+        "ammo_comsumption": null,
+        "ammo": "∞",
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "3.375 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 146 while firing",
+          "No movement speed penalty while Boosters are active.",
+          "Weapon spread increased from 3.375 to 4 degrees."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      },
+      {
+        "name": "Light Gun",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "14"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "7 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "20",
+        "reload_time": "1.4 seconds",
+        "projectile_speed": "50 m/s",
+        "projectile_radious": "0.275 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 98 while firing  (65.77 overall w/ reload)"
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Doomfist",
+    "url": "https://overwatch.fandom.com/wiki/Doomfist",
+    "weapons": [
+      {
+        "name": "Hand Cannon",
+        "effect_type": "Shotgun (projectile)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "5 – 1.5 (per shot) 55 – 16.5 (per volley)"
+        },
+        "falloff_range": "15 – 30 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "3 volleys/s 1.36 volleys/s (continuous fire of final shot)",
+        "shots_per_volley": "11",
+        "ammo_comsumption": "1",
+        "ammo": "4",
+        "reload_time": "0.4 seconds (per shot) 1.6 seconds (from empty)",
+        "projectile_speed": "80 m/s",
+        "projectile_radious": "0.05 meters",
+        "spread": [
+          "2.5 degrees"
+        ],
+        "additional_details": [
+          "Reloading automatically begins once the recovery (0.33 seconds) from previous shot ends, resulting the first projectile to be loaded after 0.73 seconds delay in total.",
+          "Reloading is interrupted if Hand Cannons is fired.",
+          "Using quick melee does not interfere with the reload timer.",
+          "Damage per second: 73.3 while firing continuously, 165 burst from full ammo."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Hazard",
+    "url": "https://overwatch.fandom.com/wiki/Hazard",
+    "weapons": [
+      {
+        "name": "Bonespur",
+        "effect_type": "Shotgun (projectile)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "7.5 - 2.25 (per shot) 75 - 22.5 (per volley)"
+        },
+        "falloff_range": "15 - 35 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.75 volleys/s",
+        "shots_per_volley": "10",
+        "ammo_comsumption": "1",
+        "ammo": "8",
+        "reload_time": "2.3 seconds",
+        "projectile_speed": "140 m/s",
+        "projectile_radious": "0.05 meters",
+        "spread": [
+          "0 degrees (center shot)",
+          "1.8 degrees (5 central shots)",
+          "3.5 degrees (4 corner shots)"
+        ],
+        "additional_details": [
+          "Damage per second: 131.58 while firing (87.46 overall with reload)",
+          "Each blast's center projectile always launches straight without random variance."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Junker Queen",
+    "url": "https://overwatch.fandom.com/wiki/Junker_Queen",
+    "weapons": [
+      {
+        "name": "Scattergun",
+        "effect_type": "Shotgun (hitscan)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "8 – 2.4 (per shot) 80 – 24 (per volley)"
+        },
+        "falloff_range": "15 – 25 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.33 volleys/s",
+        "shots_per_volley": "10",
+        "ammo_comsumption": "1",
+        "ammo": "8",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "2.85 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: ~106 while firing (~85 overall w/reload)",
+          "Fire recovery stops while using melee."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Mauga",
+    "url": "https://overwatch.fandom.com/wiki/Mauga",
+    "weapons": [
+      {
+        "name": "Incendiary Chaingun",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "4 - 1.2 (direct) 15 per second (damage over time)"
+        },
+        "falloff_range": "30 - 40 meters 15 - 20 meters (simultaneous fire)",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "18 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "300",
+        "reload_time": "2.2 seconds",
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "1 degree (base)",
+          "4 degrees (simultaneous fire)"
+        ],
+        "additional_details": [
+          "A.K.A \"Gunny\"",
+          "Damage per second: 72 while firing (64.7 w/ reload) 87 w/ damage over time 216 while firing both guns simultaneously 231 w/ damage over time",
+          "72 while firing (64.7 w/ reload)",
+          "87 w/ damage over time",
+          "216 while firing both guns simultaneously",
+          "231 w/ damage over time",
+          "Gunny and Cha-Cha can be fired one at a time or simultaneously: Each gun has a 0.16 second windup delay. Ammo and reload is shared between the two guns. Movement speed penalties stack when firing both guns simultaneously. Spread of both guns will increase to 4 degrees if both are fired at once.",
+          "Each gun has a 0.16 second windup delay.",
+          "Ammo and reload is shared between the two guns.",
+          "Movement speed penalties stack when firing both guns simultaneously.",
+          "Spread of both guns will increase to 4 degrees if both are fired at once.",
+          "The target enemy is ignited, causing them to take damage over time , if they have been hit by 10 shots from Gunny. The counter resets if the target has not been hit in the last 2 seconds or once they have been successfully ignited. Being ignited while already burning refreshes the duration. Burn damage is unaffected by Amplification Matrix .",
+          "The counter resets if the target has not been hit in the last 2 seconds or once they have been successfully ignited.",
+          "Being ignited while already burning refreshes the duration.",
+          "Burn damage is unaffected by Amplification Matrix .",
+          "The following objects cannot be set on fire: All barriers Venom Mine Sentry Turret Steel Trap Concussion Mine",
+          "All barriers",
+          "Venom Mine",
+          "Sentry Turret",
+          "Steel Trap",
+          "Concussion Mine"
+        ],
+        "keywords": [
+          "burning",
+          "critical",
+          "hitscan"
+        ]
+      },
+      {
+        "name": "Volatile Chaingun",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "4 - 1.2"
+        },
+        "falloff_range": "30 - 40 meters 15 - 20 meters (simultaneous fire)",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "18 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "300",
+        "reload_time": "2.2 seconds",
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "1 degree (base)",
+          "4 degrees (simultaneous fire)"
+        ],
+        "additional_details": [
+          "A.K.A \"Cha-Cha\"",
+          "Damage per second: 72 while firing (64.7 w/ reload) 216 while firing both guns simultaneously 231 w/ damage over time",
+          "72 while firing (64.7 w/ reload)",
+          "216 while firing both guns simultaneously",
+          "231 w/ damage over time",
+          "Gunny and Cha-Cha can be fired one at a time or simultaneously: Each gun has a 0.16 second windup delay. Ammo and reload is shared between the two guns. Movement speed penalties stack when firing both guns simultaneously. Spread of both guns will increase to 4 degrees if both are fired at once.",
+          "Each gun has a 0.16 second windup delay.",
+          "Ammo and reload is shared between the two guns.",
+          "Movement speed penalties stack when firing both guns simultaneously.",
+          "Spread of both guns will increase to 4 degrees if both are fired at once.",
+          "Fortify does prevent critical hits to an ignited Orisa.",
+          "Hitting enemies ignited by Ashe 's Dynamite , Torbjörn 's Molten Core , or Illari 's Sunburn will also cause Cha-Cha to deal critical damage. This also allows Cha-Cha to deal critical hits to objects that cannot be ignited by Gunny.",
+          "This also allows Cha-Cha to deal critical hits to objects that cannot be ignited by Gunny."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Orisa",
+    "url": "https://overwatch.fandom.com/wiki/Orisa",
+    "weapons": [
+      {
+        "name": "Augmented Fusion Driver",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "14"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "10 rounds/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "∞",
+        "reload_time": "3 seconds (cooldown after overheat) 1.9 seconds (recharge from full heat)",
+        "projectile_speed": "100 m/s",
+        "projectile_radious": "0.225 meters",
+        "spread": [
+          "0.75 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 140 while firing (100.88 overall w/ recharge, 86.84 w/ overheat)",
+          "Max spread is reached after 21 shots.",
+          "Uses a heat-based mechanic instead of ammo/reload. Fusion Driver generates 2.04% heat per projectile fired. This amounts to 50 projectiles or 5 seconds of continuous fire before overheating. While not firing, Fusion Driver instantly starts cooling, recharging 53% heat per second. It takes 1.9 seconds to restore 100% of the heat meter. Once overheated, the weapon cannot be used for 3 seconds. Abilities can be used without interrupting the recharge even while the weapon is overheated.",
+          "Fusion Driver generates 2.04% heat per projectile fired. This amounts to 50 projectiles or 5 seconds of continuous fire before overheating.",
+          "This amounts to 50 projectiles or 5 seconds of continuous fire before overheating.",
+          "While not firing, Fusion Driver instantly starts cooling, recharging 53% heat per second. It takes 1.9 seconds to restore 100% of the heat meter.",
+          "Once overheated, the weapon cannot be used for 3 seconds.",
+          "Abilities can be used without interrupting the recharge even while the weapon is overheated."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Ramattra",
+    "url": "https://overwatch.fandom.com/wiki/Ramattra",
+    "weapons": [
+      {
+        "name": "Void Accelerator",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "5"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "25 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "100",
+        "reload_time": "1 second",
+        "projectile_speed": "80 m/s",
+        "projectile_radious": "0.15 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 125 (100 overall w/ reload)",
+          "Exclusive to Omnic form.",
+          "No damage fall-off"
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      },
+      {
+        "name": "PummelLSHIFT",
+        "effect_type": "Melee Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "65"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1.67 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "∞",
+        "reload_time": null,
+        "projectile_speed": "105 m/s",
+        "projectile_radious": "0.575 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 108.33",
+          "Exclusive to Nemesis form.",
+          "Punches pierce enemies and barriers. Also damages the barriers when passing through them. Damages enemies behind Zarya 's Particle Barrier and Projected Barrier , but not the enemy affected by it.",
+          "Also damages the barriers when passing through them.",
+          "Damages enemies behind Zarya 's Particle Barrier and Projected Barrier , but not the enemy affected by it.",
+          "Pummel is not reflected when blocked by Deflect .",
+          "Does not damage enemies through terrain or terrain-like objects , like Mei 's Ice Wall or Tree of Life .",
+          "Quick Melee cancels the recovery animation of Pummel."
+        ],
+        "keywords": [
+          "melee",
+          "piercing",
+          "strong projectile"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Reinhardt",
+    "url": "https://overwatch.fandom.com/wiki/Reinhardt",
+    "weapons": [
+      {
+        "name": "Rocket Hammer",
+        "effect_type": "Melee",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "100"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1.04 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": null,
+        "spread": [],
+        "additional_details": [
+          "Damage per second: ~104 while swinging",
+          "Reinhard does not have a quick melee attack. Attempting to use it swings the Rocket Hammer instead.",
+          "Rocket Hammer knocks back enemies in the direction of the swing.",
+          "The direction of consecutive swings alternates, starting counter-clockwise.",
+          "Activating Fire Strike , Barrier Field , Charge or Earthshatter interrupts the swing animation.",
+          "The hitbox of the swings lingers slightly longer at the end position of the hammer.",
+          "Rocket Hammer is not reflected when blocked by Deflect ."
+        ],
+        "keywords": [
+          "melee"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Roadhog",
+    "url": "https://overwatch.fandom.com/wiki/Roadhog",
+    "weapons": [
+      {
+        "name": "Scrap Gun",
+        "effect_type": "Shotgun (projectile)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "6.5 – 2 (per pellet) 162.5 – 48.75 (per shot)"
+        },
+        "falloff_range": "30 – 50 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.25 shots/s",
+        "shots_per_volley": "25",
+        "ammo_comsumption": "1",
+        "ammo": "6",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "80 m/s",
+        "projectile_radious": "0.05 meters",
+        "spread": [
+          "8 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 203.13 while firing (154.76 overall w/ reload)",
+          "Fire recovery stops while using melee."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Scrap Gun Alt Fire",
+        "effect_type": "Projectile (pre-detonation) Shotgun (projectile, post-detonation)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "50 (pre-detonation) 6.5 – 2 (post-detonation, per pellet) 162.5 – 48.75 (post-detonation, per shot)"
+        },
+        "falloff_range": "None (pre-detonation) 24 - 39 meters (post-detonation)",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.25 shots/s",
+        "shots_per_volley": "1 (pre-detonation) 25 (post-detonation)",
+        "ammo_comsumption": null,
+        "ammo": "6",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "60 m/s (pre-detonation) 80 m/s (post-detonation)",
+        "projectile_radious": "0.05 meters (pre-detonation) 0.075 meters (post-detonation)",
+        "spread": [
+          "8 degrees"
+        ],
+        "additional_details": [
+          "Damage per second (pre-detonation): 62.5 while firing (47.62 overall w/reload)",
+          "Damage per second (post-detonation) 203.13 while firing (154.76 overall w/ reload)",
+          "Fire recovery stops while using melee.",
+          "Roadhog initially fires a single projectile which then explodes into 25 pellets after travelling for 0.15 seconds (9 meters)."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Sigma",
+    "url": "https://overwatch.fandom.com/wiki/Sigma",
+    "weapons": [
+      {
+        "name": "Hyperspheres",
+        "effect_type": "Arcing projectile Area of effect",
+        "blocked_by": [
+          "barriers"
+        ],
+        "damage": {
+          "damage": "15 (direct hit bonus) 40 – 12 (splash, enemy)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "0.67 shots/s",
+        "shots_per_volley": "2",
+        "ammo_comsumption": null,
+        "ammo": "∞",
+        "reload_time": null,
+        "projectile_speed": "48 m/s",
+        "projectile_radious": "0.32 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: ~73.3 while firing",
+          "Bounces off walls, floors, and ceilings. Hitting a hero or an object causes the charges to implode.",
+          "The charges automatically implode after travelling 22 meters along the trajectory. However, the maximum reach of Hyperspheres is slightly less than 22 meters due to the fact that the charges also travel downwards.",
+          "Enemies hurt by the implosion will be slightly pulled towards the center. This effect counts as a knockback .",
+          "Projectiles can be blocked by Defense Matrix , Kinetic Grasp , Power Matrix , Javelin Spin and Deflect before they implode. The implosion itself is unaffected.",
+          "Amplification Matrix affects all damage dealt, if the projectile passes through it. Splash damage alone going through is not amplified."
+        ],
+        "keywords": [
+          "area of effect",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Winston",
+    "url": "https://overwatch.fandom.com/wiki/Winston",
+    "weapons": [
+      {
+        "name": "Tesla Cannon",
+        "effect_type": "Beam (multi-target)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "70 per second"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": "20 per second",
+        "ammo": "120",
+        "reload_time": "1.7 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": null,
+        "spread": [],
+        "additional_details": [
+          "Damage per second: 70 while firing (52.24 overall w/reload)",
+          "Barrier Projector and Jump Pack can be used without interrupting fire.",
+          "Ignores armor damage reduction."
+        ],
+        "keywords": [
+          "armor piercing",
+          "barrier piercing",
+          "beam"
+        ]
+      },
+      {
+        "name": "Tesla Cannon Alt Fire",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "15.93 (min charge) 60 (max charge)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": "4 - 12",
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": "0.33 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 14.67, continuous fire at minimum charge 37.5, continuous fire at max charge 19.35, continuous fire with max hold",
+          "14.67, continuous fire at minimum charge",
+          "37.5, continuous fire at max charge",
+          "19.35, continuous fire with max hold",
+          "The amount of ammo drained increases as the ability is charged, up to 12.",
+          "The cannon automatically fires 1.5 seconds after reaching maximum charge.",
+          "Jump Pack can be used while charging without interrupting it.",
+          "Pressing primary fire cancels the charge, and activating Barrier Projector or using melee resets it.",
+          "Charging is interrupted if Winston is stunned or knocked down .",
+          "If the charging is interrupted or reset through any means, any ammo that went into charging the shot is consumed.",
+          "Ignores armor damage reduction.",
+          "Secondary fire chains up to 4 additional nearby enemies, dealing depreciating damage each chain."
+        ],
+        "keywords": [
+          "armor piercing",
+          "beam"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Wrecking Ball",
+    "url": "https://overwatch.fandom.com/wiki/Wrecking_Ball",
+    "weapons": [
+      {
+        "name": "Quad Cannons",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "5 – 1.5 per shot"
+        },
+        "falloff_range": "15 – 25 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "25 shots per second",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "80",
+        "reload_time": "1.6 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "2 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 125 while firing (83.33 overall w/reload)",
+          "There is a 0.16 seconds delay after releasing the fire button before it can be used again.",
+          "First two shots have perfect accuracy; bullet spread reaches max at 30 shots.",
+          "Automatically reloads if Wrecking Ball is in his Roll mode for 1.6 seconds."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Tank",
+    "name": "Zarya",
+    "url": "https://overwatch.fandom.com/wiki/Zarya",
+    "weapons": [
+      {
+        "name": "Particle Cannon",
+        "effect_type": "Beam",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "95 per second (at 0%) 190 per second (100% Energy)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": "20 per second",
+        "ammo": "100",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.2 meters",
+        "spread": [],
+        "additional_details": [
+          "Damage per second: 95 while firing (0% charge) (73.07 overall w/reload)",
+          "Damage per second: 190 while firing (100% charge) (146.15 overall w/reload)"
+        ],
+        "keywords": [
+          "beam"
+        ]
+      },
+      {
+        "name": "Particle Cannon Alt Fire",
+        "effect_type": "Arcing projectile Area of effect",
+        "blocked_by": [
+          "barriers"
+        ],
+        "damage": {
+          "damage": "55 – 11 (enemy, 0% Energy) 110 – 22 (enemy, 100% Energy) 27.5 – 5.5 (self, 0% Energy) 55 – 11 (self, 100% Energy)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1 shot/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": "25 per shot",
+        "ammo": "100",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "25 m/s",
+        "projectile_radious": "0.32 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 55 while firing (0% charge) (40 overall w/reload)",
+          "Damage per second: 110 while firing (100% charge (80 overall w/reload)",
+          "Grenades can still be fired even with less than 25 ammo, dealing full damage.",
+          "The projectile can be destroyed by Defense Matrix , Kinetic Grasp and Javelin Spin and reflected by Deflect before it impacts, but the impact explosion is unaffected.",
+          "Amplification Matrix affects all damage dealt, if the projectile passes through it. Splash damage alone going through is not amplified.",
+          "Self-damage is blocked by Particle Barrier , but does not generate energy."
+        ],
+        "keywords": [
+          "area of effect ✱",
+          "self-damage",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Ashe",
+    "url": "https://overwatch.fandom.com/wiki/Ashe",
+    "weapons": [
+      {
+        "name": "The Viper",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "35 – 10.5"
+        },
+        "falloff_range": "20 – 40 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "3.9 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "12",
+        "reload_time": "0.5 seconds (initial animation) +0.25 seconds per bullet 3.5 seconds (full reload animation)",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [
+          "1.85 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 136.5 while firing (63.86 overall w/ full reload, 34.78 w/ reload after each shot)",
+          "Ashe reloads The Viper one bullet at a time in rapid succession, instead of all at once. The more bullets fired, the longer it takes to fully reload. If the reload is cancelled before completion, any bullets loaded will remain in the magazine, instead of none at all.",
+          "The more bullets fired, the longer it takes to fully reload.",
+          "If the reload is cancelled before completion, any bullets loaded will remain in the magazine, instead of none at all.",
+          "Unlike most weapons , The Viper is semi-automatic instead of fully automatic.",
+          "Spread resets after 1.5 seconds since the last unscoped shot. Spread starts on the 3rd shot and reaches its maximum upon the 6th shot.",
+          "Each shot raises the Ashe camera (changes the facing angle) by 1 unit.",
+          "If after the shot you turn on the zoom and try to shoot, it will take at least 0.240 seconds."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      },
+      {
+        "name": "Take Aim (ADS)",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "75 – 22.5"
+        },
+        "falloff_range": "30 – 50 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.52 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "12",
+        "reload_time": "0.5 seconds (initial animation) +0.2 seconds per bullet 2.9 seconds (full reload animation)",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 114.33 while firing (41.3 overall w/ full reload, 32.98 w/ reload after each shot)",
+          "Ashe can jump while aiming down sights without interrupting it.",
+          "After the shot, the game raises the Ashe camera (changes the facing angle) by 1 unit, after which it starts lowering the Ashe camera to its previous value. Unlike Cassidy, Ashe will not be able to shoot once the camera is back in position and will have to wait ~0.096 seconds."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Bastion",
+    "url": "https://overwatch.fandom.com/wiki/Bastion",
+    "weapons": [
+      {
+        "name": "Configuration: Recon",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "25 - 7.5"
+        },
+        "falloff_range": "30 - 50 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "5 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "25",
+        "reload_time": "1.2 seconds",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 125 while firing (96.15 overall w/reload)"
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      },
+      {
+        "name": "Configuration: AssaultLSHIFT",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "12 - 3.6"
+        },
+        "falloff_range": "30 - 50 meters",
+        "headshot": "✕",
+        "rate_of_fire": "30 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "∞",
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "2 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 360 while firing",
+          "Bastion cannot crouch while in Configuration: Assault."
+        ],
+        "keywords": [
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Cassidy",
+    "url": "https://overwatch.fandom.com/wiki/Cassidy",
+    "weapons": [
+      {
+        "name": "Peacekeeper",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "70 - 21"
+        },
+        "falloff_range": "25 - 35 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "2 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "6",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 140 while firing (93.33 overall w/reload)",
+          "After the shot, the game raises the Cassidy camera (changes the facing angle) by 4 units, after which it starts lowering the character's camera to its previous value. As soon as this happens Cassidy can shoot again."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      },
+      {
+        "name": "Peacekeeper Alt Fire",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "50 - 15"
+        },
+        "falloff_range": "20 - 30 meters",
+        "headshot": "✕",
+        "rate_of_fire": "8.33 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": "All remaining ammo",
+        "ammo": "6",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [
+          "6 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 416.67 while firing (135.14 overall w/reload)",
+          "Peacekeeper's alternate fire is also called \"Fan the Hammer.\"",
+          "Each shot raises the Cassidy camera (changes the facing angle) by 2.5 units.",
+          "The first shot has no spread."
+        ],
+        "keywords": [
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Echo",
+    "url": "https://overwatch.fandom.com/wiki/Echo",
+    "weapons": [
+      {
+        "name": "Tri-Shot",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "17 (per pellet) 51 (per shot)"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "2.97 shots/s",
+        "shots_per_volley": "3",
+        "ammo_comsumption": "1",
+        "ammo": "12",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "75 m/s",
+        "projectile_radious": "0.175 meters",
+        "spread": [
+          "1.1 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 151.79 while firing (110.63 overall w/reload)"
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Freja",
+    "url": "https://overwatch.fandom.com/wiki/Freja",
+    "weapons": [
+      {
+        "name": "Revdraw Crossbow",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "25"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "4.81 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "15",
+        "reload_time": "1.6 seconds",
+        "projectile_speed": "125 m/s",
+        "projectile_radious": "0.175 meters",
+        "spread": [
+          "2 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 120.19 while firing (79.45 overall w/ reload)",
+          "Can be fired while Take Aim is reloading.",
+          "Maximum spread is reached at 12 shots."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Take Aim",
+        "effect_type": "Projectile Area of effect",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "40 (direct hit) 90 - 30 (explosion, enemy) 45 - 15 (explosion, self)"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "1",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "125 m/s",
+        "projectile_radious": "0.175 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Grants -90% gravity reduction. Due to this Freja can jump and reach higher with her abilities when Take Aim is activated right after.",
+          "Due to this Freja can jump and reach higher with her abilities when Take Aim is activated right after.",
+          "The bolt sticks to enemies and terrain upon impact, exploding 1 second after.",
+          "Take Aim is automatically released when the bolt is fired.",
+          "The direct hit of the arrow can headshot. The delayed explosion does not.",
+          "When the button for Take Aim is released, it cannot be used again for 0.4 seconds."
+        ],
+        "keywords": [
+          "area of effect ✱",
+          "critical",
+          "self-damage",
+          "sticky",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Genji",
+    "url": "https://overwatch.fandom.com/wiki/Genji",
+    "weapons": [
+      {
+        "name": "Shuriken",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "27 (per shuriken) 81 (per shot)"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.14 shots/s",
+        "shots_per_volley": "3",
+        "ammo_comsumption": "3",
+        "ammo": "24",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "75 m/s",
+        "projectile_radious": "0.175 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 92.05 while firing (85.94 overall w/reload)",
+          "Quick melee pauses fire recovery.",
+          "Damage increased from 27 to 29."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Shuriken Alt Fire",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "27 (per shuriken) 81 (per shot)"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.47 shots/s",
+        "shots_per_volley": "3",
+        "ammo_comsumption": "3",
+        "ammo": "24",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "75 m/s",
+        "projectile_radious": "0.175 meters",
+        "spread": [
+          "4.5 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 119.12 while firing (109.09 overall w/reload)",
+          "Shuriken's alternate fire is also called \"Fan of Blades.\"",
+          "Even if there are fewer than three shuriken in his magazine, three shurikens will be fired.",
+          "Quick melee pauses fire recovery.",
+          "Damage increased from 27 to 29."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Hanzo",
+    "url": "https://overwatch.fandom.com/wiki/Hanzo",
+    "weapons": [
+      {
+        "name": "Storm Bow",
+        "effect_type": "Arcing projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "125 (max charge) 25 (min charge)"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "0.82 shots/s (max charge) 2 shots/s (min charge)",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "∞",
+        "reload_time": null,
+        "projectile_speed": "110 m/s (max charge) 25 m/s (min charge)",
+        "projectile_radious": "0.125 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 102.46 at full charge, 50 at min charge",
+          "Fire recovery stops while using melee.",
+          "The arrow can deal damage no earlier than 0.032 second after being launched.",
+          "Takes 0.72 seconds to reach maximum draw. Draw can be held indefinitely.",
+          "The minimum draw time required to kill a full health target (without armor ) with a single headshot : 150 HP = ~0.43 seconds. 175 HP = ~0.50 seconds 200 HP = ~0.58 seconds. 225 HP = ~0.65 seconds. 250 HP = 0.72 seconds.",
+          "150 HP = ~0.43 seconds.",
+          "175 HP = ~0.50 seconds",
+          "200 HP = ~0.58 seconds.",
+          "225 HP = ~0.65 seconds.",
+          "250 HP = 0.72 seconds.",
+          "The draw progress is preserved while wall climbing.",
+          "Hanzo can undraw with Reload or Secondary Fire.",
+          "An arrow takes ~6 seconds to land when fired straight up with minimum charge."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Junkrat",
+    "url": "https://overwatch.fandom.com/wiki/Junkrat",
+    "weapons": [
+      {
+        "name": "Frag Launcher",
+        "effect_type": "Arcing projectile Area of effect",
+        "blocked_by": [
+          "barriers"
+        ],
+        "damage": {
+          "damage": "45 (direct hit) 80 - 10 (splash, enemy)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1.5 shots/s recovery stops while using melee",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "5",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "25 m/s",
+        "projectile_radious": "0.325 meters (0.16 meters after second bounce)",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 180 while firing (124.13 overall w/reload)",
+          "The grenades explode after: 2 times bouncing off the ground. Bouncing off the surroundings and landing on the ground afterwards. Getting contact with an enemy hitbox. 4.5 seconds of flight without hitting solid objects.",
+          "2 times bouncing off the ground.",
+          "Bouncing off the surroundings and landing on the ground afterwards.",
+          "Getting contact with an enemy hitbox.",
+          "4.5 seconds of flight without hitting solid objects.",
+          "Before a nade detonates, an audio cue is played and can be heard if nearby. The nade then freezes in place for 0,3 second pre-detonation, during which the explosion can't be stopped by any means. If the nade is shot bouncing on the ground, or just bounce off a wall/an object, it'll explode if it bounces a second time less than 1,5 second after the first bounce. Nades can bounce on walls and objects several times without exploding.",
+          "The projectile size is decreased after its second bounce.",
+          "The velocity of the projectile is slightly reduced after each bounce.",
+          "The projectile can be destroyed while in air by Defense Matrix , Kinetic Grasp and Javelin Spin and reflected by Deflect , but the splash is unaffected.",
+          "Amplification Matrix affects all damage dealt, if the projectile passes through it. Splash damage alone going through is not amplified."
+        ],
+        "keywords": [
+          "area of effect ✱",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Mei",
+    "url": "https://overwatch.fandom.com/wiki/Mei",
+    "weapons": [
+      {
+        "name": "Endothermic Blaster",
+        "effect_type": "Beam (projectile)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "5"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "20 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "140",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "20 m/s",
+        "projectile_radious": "0.55 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 100 while firing (82.35 overall w/reload)"
+        ],
+        "keywords": [
+          "beam",
+          "cleansable",
+          "piercing"
+        ]
+      },
+      {
+        "name": "Endothermic Blaster Alt Fire",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "85"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1 shot per 0.8 seconds",
+        "shots_per_volley": null,
+        "ammo_comsumption": "10 per shot",
+        "ammo": "140",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "115 m/s",
+        "projectile_radious": "0.2 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 106.25 while firing (94.44 overall w/reload)",
+          "Endothermic Blaster's alternate fire is also called \"Icicle.\"",
+          "Recovery stops while using melee.",
+          "Even if there is less than 10 ammo left, the next icicle will be fired as normal before reloading."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Pharah",
+    "url": "https://overwatch.fandom.com/wiki/Pharah",
+    "weapons": [
+      {
+        "name": "Rocket Launcher",
+        "effect_type": "Projectile Area of effect",
+        "blocked_by": [
+          "barriers"
+        ],
+        "damage": {
+          "damage": "40 (direct hit) 80 – 24.6 (splash, enemy) 20 – 6.15 (splash, self)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1.25 shots/second",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "6",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "40 m/s",
+        "projectile_radious": "0.325 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 150 while firing (114 overall w/reload)",
+          "Fire recovery stops while using melee",
+          "Explosive Damage and knockback decreases with distance from the explosion, reaching 0% at the edge of the blast radius.",
+          "Explosive Damage and knockback also apply to self.",
+          "The projectile can be destroyed while in air by Defense Matrix , Kinetic Grasp and Javelin Spin and reflected by Deflect , but the explosion is unaffected.",
+          "Amplification Matrix affects all damage dealt, if the projectile passes through it. Splash damage alone going through is not amplified."
+        ],
+        "keywords": [
+          "area of effect ✱",
+          "self-damage",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Reaper",
+    "url": "https://overwatch.fandom.com/wiki/Reaper",
+    "weapons": [
+      {
+        "name": "Hellfire Shotguns",
+        "effect_type": "Shotgun (hitscan)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "5.75 – 1.725 per pellet 115 – 34.5 per shot"
+        },
+        "falloff_range": "10 – 20 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "2 shots/s",
+        "shots_per_volley": "20",
+        "ammo_comsumption": "1",
+        "ammo": "8",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.05 meters",
+        "spread": [
+          "6 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 230 while firing (153.33 overall with reload)",
+          "Healing per second: 69 while firing (45.999 overall with reload)"
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Sojourn",
+    "url": "https://overwatch.fandom.com/wiki/Sojourn",
+    "weapons": [
+      {
+        "name": "Railgun",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "9"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "16 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": "1",
+        "ammo": "45",
+        "reload_time": "1.2 seconds",
+        "projectile_speed": "160 m/s",
+        "projectile_radious": "0.175 meters",
+        "spread": [
+          "1.6 degrees (vertical, max)",
+          "0.64 degrees (horizontal, max)"
+        ],
+        "additional_details": [
+          "Damage per second: 144 while firing (~100.93 overall w/reload)",
+          "Each projectile hit generates 5 energy against heroes and 1 energy against objects , such as barriers and turrets. Critical hits against heroes grant 10 energy instead of 5. The amount of energy gained is unaffected by damage modifiers (amplifications, reductions).",
+          "Critical hits against heroes grant 10 energy instead of 5.",
+          "The amount of energy gained is unaffected by damage modifiers (amplifications, reductions).",
+          "Maximum spread is reached after 12 shots.",
+          "Spread is 2.5x more vertical than it is horizontal."
+        ],
+        "keywords": [
+          "critical",
+          "energy",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Railgun Alt Fire",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "120 - 60 (max charge) 21 - 10.5 (min charge)"
+        },
+        "falloff_range": "40 – 60 meters",
+        "headshot": "✓ (x1.5)",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": "0.14 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Railgun's alternate fire is also called \"Charged Shot\".",
+          "Can be charged up to a maximum of 100 energy but can be fired with at least 1 energy charge.",
+          "Damage scales with the amount of stored energy.",
+          "Damage increase is linear, with each point of energy increasing damage by 1.",
+          "After 9 seconds without gaining energy, Sojourn's secondary fire energy will begin decaying at a rate of 15 per second."
+        ],
+        "keywords": [
+          "hitscan",
+          "lesser critical",
+          "piercing"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Soldier: 76",
+    "url": "https://overwatch.fandom.com/wiki/Soldier:_76",
+    "weapons": [
+      {
+        "name": "Heavy Pulse Rifle",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "19 - 5.7"
+        },
+        "falloff_range": "30 - 50 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "9 rounds per second",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "30",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 171 while firing (117.9 overall w/ reload)",
+          "Each shot changes facing angle +0.098."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Sombra",
+    "url": "https://overwatch.fandom.com/wiki/Sombra",
+    "weapons": [
+      {
+        "name": "Machine Pistol",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "8 - 2.4"
+        },
+        "falloff_range": "15 - 35 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "20 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "60",
+        "reload_time": "1.2 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "2.3 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 160 while firing (114.3 overall w/reload) 192 while firing w/ opportunist",
+          "160 while firing (114.3 overall w/reload)",
+          "192 while firing w/ opportunist",
+          "Maximum spread is reached after 6 shots.",
+          "If primary fire is released there is a 0.16 seconds recovery period before it can be used again."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Symmetra",
+    "url": "https://overwatch.fandom.com/wiki/Symmetra",
+    "weapons": [
+      {
+        "name": "Photon Projector",
+        "effect_type": "Beam",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "60/120/180 per second (level 1/2/3)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": "10 per second",
+        "ammo": "100",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.25 meters",
+        "spread": [],
+        "additional_details": [
+          "Charge level increases after hitting an enemy hero or deployable (e.g. barrier, turret, mine, etc.) for 0.9 seconds.",
+          "When damaging an enemy's barrier or shield health with her beam, Symmetra regenerates 10 ammo per second and 10/20/30 shields per second, depending on her charge level (1/2/3). This does not affect her base health."
+        ],
+        "keywords": [
+          "beam"
+        ]
+      },
+      {
+        "name": "Photon Projector Alt Fire",
+        "effect_type": "Projectile Area of effect",
+        "blocked_by": [
+          "barriers"
+        ],
+        "damage": {
+          "damage": "5 - 100 (direct hit, min - max charge) 2.5 - 50 (aoe at falloff start, min - max charge) 2.5 - 12.5 (aoe at max radius, min - max charge)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "3.9 shots/s (min charge) 0.8 shots/s (max charge)",
+        "shots_per_volley": null,
+        "ammo_comsumption": "1 - 10 (min - max charge)",
+        "ammo": "100",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "50 m/s",
+        "projectile_radious": "0.115 - 0.575 meters (min - max charge)",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 80 while firing at full charge (71.43 w/ reload)",
+          "If the center of the projectile circle does not touch the wall, then the projectile will not explode against the wall. This allows you to shoot at enemies that are located at the edges of shelters.",
+          "The shots can be charged to increase their damage, projectile radius and maximum explosion radius. A shot takes 1 second to fully charge, and can be held for an additional 1 second upon reaching maximum charge before automatically firing. Charge can be canceled by using any ability, including just entering the targeting mode. Any ammo that went to charging the shot is consumed. The damage is scaled off charge time, not ammo consumption. Minimum of 1 ammo will be consumed. As long as there is any ammo left, an energy ball can still be fired at full charge.",
+          "A shot takes 1 second to fully charge, and can be held for an additional 1 second upon reaching maximum charge before automatically firing.",
+          "Charge can be canceled by using any ability, including just entering the targeting mode. Any ammo that went to charging the shot is consumed.",
+          "The damage is scaled off charge time, not ammo consumption. Minimum of 1 ammo will be consumed.",
+          "As long as there is any ammo left, an energy ball can still be fired at full charge.",
+          "The projectile can be destroyed while in air by Defense Matrix , Kinetic Grasp and Javelin Spin and reflected by Deflect , but the explosion is unaffected.",
+          "Amplification Matrix affects all damage dealt, if the projectile passes through it. Splash damage alone going through is not amplified."
+        ],
+        "keywords": [
+          "area of effect ✱",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Torbjörn",
+    "url": "https://overwatch.fandom.com/wiki/Torbj%C3%B6rn",
+    "weapons": [
+      {
+        "name": "Rivet Gun1",
+        "effect_type": "Arcing projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "70"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.96 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "18",
+        "reload_time": "2 seconds",
+        "projectile_speed": "70 m/s",
+        "projectile_radious": "0.18 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 137.25 while firing (112.7 overall w/reload)",
+          "Automatically reloaded if Torbjörn has his Forge Hammer equipped for 2 seconds.",
+          "Turret will target enemy hit by primary fire if within range and line of sight."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Rivet Gun Alt Fire1",
+        "effect_type": "Shotgun (projectile)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "12.5 - 3.75 per pellet 125 - 37.5 per shot"
+        },
+        "falloff_range": "10 – 20 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.43 shots/s",
+        "shots_per_volley": "10",
+        "ammo_comsumption": "2",
+        "ammo": "18",
+        "reload_time": "2 seconds",
+        "projectile_speed": "120 m/s",
+        "projectile_radious": "0.05 meters",
+        "spread": [
+          "4.5 degrees"
+        ],
+        "additional_details": [
+          "Damage per second: 178.57 while firing (135.54 overall w/reload)",
+          "Automatically reloaded if Torbjörn has his Forge Hammer equipped for 2 seconds."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Forge Hammer2",
+        "effect_type": "Melee",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "70"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1 swing per ~0.7 seconds",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": null,
+        "spread": [],
+        "additional_details": [
+          "Damage per second: 100",
+          "Weapon swap time is 0.4 seconds.",
+          "Torbjörn cannot use quick melee with Forge Hammer equipped. Attempting to will swing the hammer normally instead."
+        ],
+        "keywords": [
+          "melee"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Tracer",
+    "url": "https://overwatch.fandom.com/wiki/Tracer",
+    "weapons": [
+      {
+        "name": "Pulse Pistols",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "6 - 1.8 (per bullet) 12 - 3.6 (per shot)"
+        },
+        "falloff_range": "10 - 20 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "20 shots/s",
+        "shots_per_volley": "2",
+        "ammo_comsumption": "2",
+        "ammo": "40",
+        "reload_time": "1 second",
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "3.5 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 240 while firing (120 overall w/reload)",
+          "~0.22 seconds recovery if firing is paused.",
+          "Maximum spread is reached after 3 shots.",
+          "Ammo increased from 40 to 60.",
+          "Damage reduced from 5.5 to 5."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Venture",
+    "url": "https://overwatch.fandom.com/wiki/Venture",
+    "weapons": [
+      {
+        "name": "Smart Excavator",
+        "effect_type": "Projectile Area of effect",
+        "blocked_by": [
+          "barriers"
+        ],
+        "damage": {
+          "damage": "35 (direct hit bonus) 40 - 12 (explosion)"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1.67 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "8",
+        "reload_time": "1.75 seconds",
+        "projectile_speed": "50 m/s",
+        "projectile_radious": "0.32 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 125 while firing (95.24 overall w/reload)",
+          "Projectile explodes upon hitting an enemy, terrain or upon reaching its maximum range.",
+          "Explosions do not deal self-damage, but will cause a knockback.",
+          "Enemies hit by the shot are knocked back .",
+          "The projectile can be destroyed while in air by Defense Matrix , Kinetic Grasp and Javelin Spin and reflected by Deflect , but the explosion is unaffected.",
+          "Amplification Matrix affects all damage dealt, if the projectile passes through it. Splash damage alone going through is not amplified."
+        ],
+        "keywords": [
+          "area of effect ✱",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Damage",
+    "name": "Widowmaker",
+    "url": "https://overwatch.fandom.com/wiki/Widowmaker",
+    "weapons": [
+      {
+        "name": "Widow's Kiss",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "14 - 4.2"
+        },
+        "falloff_range": "20 - 40 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "10 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "35",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [
+          "3 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 140 while firing (98 overall w/ reload)",
+          "Maximum spread is reached after 11 shots."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      },
+      {
+        "name": "Widow's Kiss (ADS)",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "12 - 6 (at 0% power) 120 - 60 (at 100% power)"
+        },
+        "falloff_range": "50 - 70 meters",
+        "headshot": "✓ (x2.5)",
+        "rate_of_fire": "0.5 second recovery",
+        "shots_per_volley": null,
+        "ammo_comsumption": "5 per shot",
+        "ammo": "35",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "None",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 80 while firing (full charge) (70 overall w/reload)",
+          "The base damage is 12 and scales linearly to 120. Each percent of power increases the damage by 1.08.",
+          "The minimum power required to kill a full health target less than 50 meters away (without armor ) with a single headshot : 175 HP: 54% 200 HP: 63% 225 HP: 73% 250 HP: 82% 275 HP: 91% 300 HP: 100%",
+          "175 HP: 54%",
+          "200 HP: 63%",
+          "225 HP: 73%",
+          "250 HP: 82%",
+          "275 HP: 91%",
+          "300 HP: 100%",
+          "If fired with less than 50% power, the shots make a softer sound and leave a smaller trail.",
+          "Jumping or using an ability interrupts ADS (\"Aiming Down Sights\" i.e. scoping) and charging, however it can be restarted right after even if still in air."
+        ],
+        "keywords": [
+          "greater critical",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Ana",
+    "url": "https://overwatch.fandom.com/wiki/Ana",
+    "weapons": [
+      {
+        "name": "Biotic Rifle",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "75 over 0.59 seconds"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1.25 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "15",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "125 m/s",
+        "projectile_radious": "0.15 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage/healing per second: 93.75 while firing (83.33 overall w/ reload)",
+          "Shots pass through full health allies and do not affect them.",
+          "Ignores armor's damage reduction.",
+          "Applies a damage/heal-over-time effect that can be cleansed. Health Packs cleanse the damage-over-time.",
+          "Using melee or zooming in/out stops fire recovery.",
+          "After the shot, the game raises the Ana camera (changes the facing angle) by 2 units, after which it starts lowering the character's camera to its previous value (a little bit changes it). Unlike Cassidy, Ana will not be able to shoot once the camera is back in position and will have to wait."
+        ],
+        "keywords": [
+          "armor piercing",
+          "cleansable",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Zoom (ADS)",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "75 over 0.59 seconds"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1.25 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "15",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters (enemies) 0.3 meters (allies)",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Besides following differences, scoped shots have the same properties as hip fire shots: Scoped shots are instant and leave a tracer behind. Ana's movement speed is reduced while aiming down sights. While aiming down sights, projectile size larger for allies, making it easier to heal. It is smaller for enemies.",
+          "Scoped shots are instant and leave a tracer behind.",
+          "Ana's movement speed is reduced while aiming down sights.",
+          "While aiming down sights, projectile size larger for allies, making it easier to heal. It is smaller for enemies."
+        ],
+        "keywords": [
+          "armor piercing",
+          "cleansable",
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Baptiste",
+    "url": "https://overwatch.fandom.com/wiki/Baptiste",
+    "weapons": [
+      {
+        "name": "Biotic Launcher",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "25 - 7.2 (per shot) 75 - 21.6 (per round)"
+        },
+        "falloff_range": "25 - 45 meters",
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.7 shots/s",
+        "shots_per_volley": "3",
+        "ammo_comsumption": "3",
+        "ammo": "36",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": null,
+        "projectile_radious": "0.07 meters",
+        "spread": [],
+        "additional_details": [
+          "Damage per second: ~127.5 while firing (109 overall w/reload)",
+          "Baptiste's crosshair moves up as he fires, then comes back down after firing.",
+          "Reloading Biotic Launcher replenishes the ammo for both the primary and alternate fire.",
+          "Baptiste can alternate between the two modes of fire. There is a 0.144 seconds recovery to use secondary fire after firing the third bullet.",
+          "There is a 0.144 seconds recovery to use secondary fire after firing the third bullet."
+        ],
+        "keywords": [
+          "critical",
+          "hitscan"
+        ]
+      },
+      {
+        "name": "Biotic Launcher Alt Fire",
+        "effect_type": "Arcing projectile Area of effect",
+        "blocked_by": [
+          "barriers"
+        ],
+        "damage": {},
+        "falloff_range": null,
+        "headshot": null,
+        "rate_of_fire": "1.11 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "10",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "60 m/s",
+        "projectile_radious": "None",
+        "spread": [],
+        "additional_details": [
+          "Healing per second: 66.66 - 99.99 (indirect - direct) while firing (57.09-85.64 overall w/reload)",
+          "Cannot heal self.",
+          "Projectile passes through full-health allies.",
+          "Reloading Biotic Launcher replenishes the ammo for both the primary and alternate fire.",
+          "Baptiste can alternate between the two modes of fire. There is a 0.144 seconds recovery to use primary fire after firing.",
+          "There is a 0.144 seconds recovery to use primary fire after firing.",
+          "The projectile can be destroyed while in air by Defense Matrix , Kinetic Grasp , Power Matrix and Javelin Spin and reflected by Deflect , but the explosion is unaffected.",
+          "Amplification Matrix affects all healing dealt, if the projectile passes through it. Splash healing alone going through is not amplified.",
+          "Projectile does not collide with fences and other breakables."
+        ],
+        "keywords": [
+          "area of effect ✱",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Brigitte",
+    "url": "https://overwatch.fandom.com/wiki/Brigitte",
+    "weapons": [
+      {
+        "name": "Rocket Flail",
+        "effect_type": "Melee",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp"
+        ],
+        "damage": {
+          "damage": "45"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": "1 swing per 0.6 seconds",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": null,
+        "spread": [],
+        "additional_details": [
+          "Damage per second: 75",
+          "At 5-6 meters away, Brigitte's flail has a horizontal range of 3 meters on the side she swings toward and 2 meters on the opposite side.",
+          "Brigitte does not have a quick melee . Attempting to use it will swing the Rocket Flail instead.",
+          "Rocket Flail is not reflected when blocked by Deflect ."
+        ],
+        "keywords": [
+          "melee"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Illari",
+    "url": "https://overwatch.fandom.com/wiki/Illari",
+    "weapons": [
+      {
+        "name": "Solar Rifle",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "70 - 21 (max charge) 20 - 6 (min charge)"
+        },
+        "falloff_range": "30 - 50 meters",
+        "headshot": "✓ (x1.5)",
+        "rate_of_fire": "1.11 shot/s (max charge) 2.00 shots/s (min charge)",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "14",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": null,
+        "projectile_radious": "0.12 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second (max charge): 77.7 while firing (68 overall w/ reload)",
+          "Damage per second (min charge): 40 while firing (31.82 overall w/ reload)",
+          "Using secondary fire, quick melee or abilities do not interrupt charging.",
+          "Charge rate is affected by Kitsune Rush ."
+        ],
+        "keywords": [
+          "hitscan",
+          "lesser critical"
+        ]
+      },
+      {
+        "name": "Solar Rifle Alt Fire",
+        "effect_type": "Beam",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {},
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": "0.25 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Can be fired continuously for 3.5 seconds before running out of energy.",
+          "Takes 2.3 seconds to recharge to full once regeneration starts.",
+          "If completely ran out of energy, it takes an additional 0.4 seconds before energy starts recharging and secondary fire cannot be used again until the energy is fully recharged.",
+          "Using primary fire or reloading do not interrupt recharging energy.",
+          "Healing tickrate is affected by Kitsune Rush rush, but the resource consumption remains the same.",
+          "Is fully recharged from depleted when Captive Sun is used.",
+          "Can destroy fences and other breakables."
+        ],
+        "keywords": [
+          "beam",
+          "channeled",
+          "energy"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Juno",
+    "url": "https://overwatch.fandom.com/wiki/Juno",
+    "weapons": [
+      {
+        "name": "Mediblaster",
+        "effect_type": "Hitscan",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "7.5 - 2.25 (per round) 90 - 27 (per burst)"
+        },
+        "falloff_range": "25 - 35 meters (damage and healing)",
+        "headshot": "✕",
+        "rate_of_fire": "1.29 shots/s",
+        "shots_per_volley": "12",
+        "ammo_comsumption": "12 per shot",
+        "ammo": "180",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": null,
+        "projectile_radious": "0.04 meters",
+        "spread": [
+          "0.85 degrees"
+        ],
+        "additional_details": [
+          "Healing per second: 93.02 (overall w/ reload 78.64)",
+          "Damage per second: 116.28 (overall w/ reload 98.3)",
+          "Within 20 meters, Juno's Mediblaster deals full damage and healing. From 20 to 35 meters, both damage and healing gradually decrease, reaching a minimum of 30% beyond 35 meters.",
+          "When looking at an ally, the blaster will display a happy emoticon, and while looking at a visible enemy, it displays an angry emoticon, indicating that Juno will either heal or deal damage while shooting at that player."
+        ],
+        "keywords": [
+          "hitscan"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Kiriko",
+    "url": "https://overwatch.fandom.com/wiki/Kiriko",
+    "weapons": [
+      {
+        "name": "Healing Ofuda",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {},
+        "falloff_range": null,
+        "headshot": null,
+        "rate_of_fire": "0.2 seconds (per burst) 1.7 seconds (full clip)",
+        "shots_per_volley": "2",
+        "ammo_comsumption": "2 per volley",
+        "ammo": "10",
+        "reload_time": "0.9 seconds",
+        "projectile_speed": "24 m/s (homing) 18 m/s (non-homing)",
+        "projectile_radious": "None",
+        "spread": [],
+        "additional_details": [
+          "Healing per second: 130 (~76.5 overall w/ recovery)",
+          "Default behavior is a toggle, meaning pressing the button will cause Kiriko to hold down the ability. If you don't want to use all 10 Healing Ofuda, you must press again to toggle off. This setting can be changed in the options.",
+          "After being thrown, the talismans are either yellow or blue. The color indicates whether they are homing in on a target. Yellow means they are seeking the allied player. Blue means they don't have a target. Blue ofuda can still heal an ally if they walk into the missed ofuda's path.",
+          "Yellow means they are seeking the allied player.",
+          "Blue means they don't have a target. Blue ofuda can still heal an ally if they walk into the missed ofuda's path.",
+          "Healing Ofuda are destroyed upon impact with terrain (whether they were homing or not).",
+          "Healing Ofuda automatically reload when they are not in use or the clip is emptied. All 10 Ofuda are restored, regardless of how many Ofuda were left in the clip.",
+          "The max range for Healing Ofuda is the same as Swift Step , so you can use the indicator for that ability to determine if your Healing Ofuda is within range of homing in or not.",
+          "The maximum view angle for Healing Ofuda lock on is half that of Swift Step . If Swift Step sensitivity is set to 50%, then the presence of the Swift Step reticle will also indicate an adequate viewing angle for Healing Ofuda lock-on.",
+          "Healing Ofuda will continue to home on targets even when they teleport or become untargetable by enemies, such as a Shadow Stepping Reaper or a Moira using Fade . They are still limited by their max homing range.",
+          "Despite Deflect switching ownership to Genji, yellow ofudas will still try to seek their original target. If Genji's allies stand in their path, they will be healed.",
+          "Can destroy fences and other breakables when colliding with them."
+        ],
+        "keywords": [
+          "travel time"
+        ]
+      },
+      {
+        "name": "Kunai",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "60"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1 shot per 0.5 seconds",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "15",
+        "reload_time": "1 second",
+        "projectile_speed": "90 m/s",
+        "projectile_radious": "0.225 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 120 while firing (105.88 overall w/reload)"
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Lifeweaver",
+    "url": "https://overwatch.fandom.com/wiki/Lifeweaver",
+    "weapons": [
+      {
+        "name": "Healing Blossom",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {},
+        "falloff_range": null,
+        "headshot": null,
+        "rate_of_fire": "0.67 shots/s (max charge) 3.33 shots/s (min charge)",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "16",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "60 m/s",
+        "projectile_radious": "0.25 meters",
+        "spread": [],
+        "additional_details": [
+          "Healing per second: 55.2 while firing at full charge (51.8 overall w/ reload) 33.3 while firing at minimum charge (25.4 overall w/reload)",
+          "55.2 while firing at full charge (51.8 overall w/ reload)",
+          "33.3 while firing at minimum charge (25.4 overall w/reload)",
+          "The projectiles are fired in the direction of your reticle and start homing to the target after a small delay. The lock on persists even if they leave the initial range or use movement abilities after its fired. The projectiles can go through terrain if locked on.",
+          "The lock on persists even if they leave the initial range or use movement abilities after its fired.",
+          "The projectiles can go through terrain if locked on.",
+          "Can be targeted through barriers , but the projectile will be blocked by them. There is a small delay before the target becomes invalid after leaving the required view angle, so you can sometimes heal around barriers by quickly flicking your aim in a different direction when releasing the heal. [ 6 ]",
+          "There is a small delay before the target becomes invalid after leaving the required view angle, so you can sometimes heal around barriers by quickly flicking your aim in a different direction when releasing the heal. [ 6 ]",
+          "The blossom takes 1.2 seconds to reach maximum charge while actively firing and 5.4 seconds while not firing.",
+          "The active charge time can be sped up by Kiriko's Kitsune Rush , but passive charging is unaffected.",
+          "Healing Blossom automatically reloads after 2.5 seconds, when Thorn Volley is in use.",
+          "Firing can be interrupted without losing charge by using Quick Melee , targeting Tree of Life or swapping to Thorn Volley.",
+          "Using Petal Platform, Rejuvenating Dash or Life Grip does not interrupt active charging.",
+          "Manually reloading resets the charge, automatic reload while Thorn Volley is active does not."
+        ],
+        "keywords": [
+          "travel time"
+        ]
+      },
+      {
+        "name": "Thorn Volley",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "6 (per thorn) 12 (per shot)"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "11 volleys/s",
+        "shots_per_volley": "2",
+        "ammo_comsumption": "2 per volley",
+        "ammo": "100",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "100 m/s",
+        "projectile_radious": "0.2 meters",
+        "spread": [
+          "1.2 degrees (max)"
+        ],
+        "additional_details": [
+          "Damage per second: 131.87 while firing (99.17 overall w/ reload)",
+          "One of the two thorns shot has 25% less spread.",
+          "Thorn Volley automatically reloads after 2.5 seconds, when Healing Blossom is in use.",
+          "Thorn Volley's spread starts at 0 and builds to its maximum spread over 20 shots (10 volleys or ~0.9 seconds)"
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Lúcio",
+    "url": "https://overwatch.fandom.com/wiki/L%C3%BAcio",
+    "weapons": [
+      {
+        "name": "Sonic Amplifier",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "20 (per round) 80 (per volley)"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1.07 volleys/s",
+        "shots_per_volley": "4",
+        "ammo_comsumption": "4 per volley",
+        "ammo": "20",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "50 m/s",
+        "projectile_radious": "0.22 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 85.56 while firing (64.78 overall w/reload)",
+          "Projectile can deal damage no earlier than 0.032 second after being used.",
+          "Recovery stops while using melee.",
+          "If with less than 4 ammo, a button press will only fire as many rounds are remaining."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Mercy",
+    "url": "https://overwatch.fandom.com/wiki/Mercy",
+    "weapons": [
+      {
+        "name": "Caduceus Staff1",
+        "effect_type": "Targeted (lock-on)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "dmg_amplification": "+30% dealt"
+        },
+        "falloff_range": null,
+        "headshot": null,
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": null,
+        "spread": [],
+        "additional_details": [
+          "Primary fire creates a healing beam and secondary fire creates a damage amplifying beam that lock on to a nearby ally. They ignore barriers and will linger for 1.3 seconds if the target breaks line of sight or moves out of range. Mercy does not need to look at her target to maintain connection.",
+          "In order to amplify a type's damage, Mercy must be boosting the hero when the projectile was fired. After that, it will be boosted even if Mercy stops boosting when it lands. For projectile abilities which apply damage over time , such as Dynamite and Virus , the damage over time will be boosted if the projectile that applies the damage was boosted.",
+          "For projectile abilities which apply damage over time , such as Dynamite and Virus , the damage over time will be boosted if the projectile that applies the damage was boosted.",
+          "Damage over time abilities, such as Carnage and Incendiary Chaingun , will have their damage amplified if Mercy is boosting the hero whilst the damage is being applied to the enemy. After which, the damage will still be boosted even without Mercy boosting the hero.",
+          "Mercy gains ultimate charge equal to the damage that she amplifies, except from self-damage.",
+          "Mercy's damage boost does not stack with itself."
+        ],
+        "keywords": [
+          "amp",
+          "beam",
+          "ignore barrier ✱"
+        ]
+      },
+      {
+        "name": "Caduceus Blaster2",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "20"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "5 shots/s",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "25",
+        "reload_time": "1.4 seconds",
+        "projectile_speed": "50 m/s",
+        "projectile_radious": "0.275 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second = 100 while firing (78 overall w/reload)",
+          "The blaster is automatically reloaded if not equipped for 1.4 seconds.",
+          "Upon switching weapon, there is 0.51 second recovery period where Mercy cannot use her weapon ."
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Moira",
+    "url": "https://overwatch.fandom.com/wiki/Moira",
+    "weapons": [
+      {
+        "name": "Biotic Grasp",
+        "effect_type": "Beam (projectile)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {},
+        "falloff_range": null,
+        "headshot": null,
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": null,
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": "None",
+        "spread": [],
+        "additional_details": [
+          "Causes a heal over time that begins upon the last impact of the spray healing. This allows Moira to heal without expending resources.",
+          "Passes through allies and enemies, but not enemy barriers .",
+          "Line of sight blocked by terrain and terrain-like objects.",
+          "Like Projectile , there is travel time for the spray to reach its destination.",
+          "Collision against map geometry and enemy barriers is pinpoint, much like Reinhardt's Fire Strike .",
+          "Needs at least 8 biotic energy to activate.",
+          "Can destroy fences and other breakables."
+        ],
+        "keywords": [
+          "beam",
+          "energy",
+          "piercing"
+        ]
+      },
+      {
+        "name": "Biotic Grasp Alt Fire",
+        "effect_type": "Beam (no target indicator, soft lock-on)",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "65 per second"
+        },
+        "falloff_range": null,
+        "headshot": "✕",
+        "rate_of_fire": null,
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "∞",
+        "reload_time": null,
+        "projectile_speed": null,
+        "projectile_radious": null,
+        "spread": [],
+        "additional_details": [
+          "Biotic Grasp has a 0.7 meter target acquisition radius against enemy heroes.",
+          "Self-healing and damage are completely separate. Altering the damage does not affect the self heal.",
+          "Generates 21.875 biotic energy per second. When combined with the passive regeneration, this becomes 25.715 biotic energy per second (or 16% per second). Spamming Biotic Grasp Increase the biotic energy regeneration faster than a continuous press .",
+          "Spamming Biotic Grasp Increase the biotic energy regeneration faster than a continuous press .",
+          "Alternating between Secondary Fire and Melee will help you eliminate targets faster."
+        ],
+        "keywords": [
+          "beam"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Wuyang",
+    "url": "https://overwatch.fandom.com/wiki/Wuyang",
+    "weapons": [
+      {
+        "name": "Xuanwu Staff",
+        "effect_type": "Arcing projectile Area of effect",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "10 (direct hit bonus, uncharged) 20 (splash, uncharged) 40 (direct hit bonus, charged) 60 (splash, charged)"
+        },
+        "falloff_range": "0.8 - 1.3 meters (splash, uncharged) 0.8 - 2.7 meters (splash, charged)",
+        "headshot": "✕",
+        "rate_of_fire": "3 shots/s",
+        "shots_per_volley": "1",
+        "ammo_comsumption": "1 (uncharged) 2 (charged)",
+        "ammo": "20",
+        "reload_time": "1.5 seconds",
+        "projectile_speed": "25 m/s",
+        "projectile_radious": "0.42 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: Rapid fire of uncharged orbs: 90.91 while firing (74.07 overall w/ reload) Perfectly timed charged orbs: 158.73 while firing (128.21 overall w/ reload)",
+          "Rapid fire of uncharged orbs: 90.91 while firing (74.07 overall w/ reload)",
+          "Perfectly timed charged orbs: 158.73 while firing (128.21 overall w/ reload)",
+          "You can start controlling an orb after 5.5 meters approximately.",
+          "While controlling the orb, it has no gravity and will continuously redirect towards the crosshair.",
+          "Upon releasing the orb or reaching the maximum control time, the orb it will continue in its current direction and will again be affected by gravity.",
+          "Orbs get empowered after being controlled for 0.3 seconds (approximately 7.5 meters), consuming an extra ammo but gaining increased damage and explosion radius. Orb will remain empowered even if the player stops controlling it.",
+          "Using Guardian Wave and Tidal Blast will release control of the orb.",
+          "A charged orb applies a brief knockback after its explosion."
+        ],
+        "keywords": [
+          "area of effect",
+          "channeled",
+          "travel time"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "name": "Zenyatta",
+    "url": "https://overwatch.fandom.com/wiki/Zenyatta",
+    "weapons": [
+      {
+        "name": "Orb of Destruction",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "50"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1 shot every 0.4 second",
+        "shots_per_volley": null,
+        "ammo_comsumption": null,
+        "ammo": "25",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "90 m/s",
+        "projectile_radious": "0.225 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 125 while firing (108.7 overall w/reload)",
+          "Damage per second: 156.25 (w/ discord) (135.87 overall w/reload)"
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      },
+      {
+        "name": "Orb of Destruction Alt Fire",
+        "effect_type": "Projectile",
+        "blocked_by": [
+          "barriers",
+          "Defense Matrix/Kinetic Grasp",
+          "Deflect/Javelin Spin"
+        ],
+        "damage": {
+          "damage": "50 per orb 250 per volley"
+        },
+        "falloff_range": null,
+        "headshot": "✓ (x2)",
+        "rate_of_fire": "1 orb per 0.524 seconds (charging) 1 shot per 0.144 seconds (firing) 0.6 seconds recovery",
+        "shots_per_volley": null,
+        "ammo_comsumption": "Up to 5 per volley",
+        "ammo": "25",
+        "reload_time": "1.5 seconds animation",
+        "projectile_speed": "90 m/s",
+        "projectile_radious": "0.225 meters",
+        "spread": [
+          "None"
+        ],
+        "additional_details": [
+          "Damage per second: 77.64 while firing (68.18 overall w/reload)",
+          "Damage per second: 97.05 while firing (w/ discord) (88.78 overall w/reload)"
+        ],
+        "keywords": [
+          "critical",
+          "travel time"
+        ]
+      }
+    ]
+  }
+]

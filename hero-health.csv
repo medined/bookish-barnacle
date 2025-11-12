@@ -1,0 +1,45 @@
+role,name,health,armor
+Tank,D.Va,225,325
+Tank,Doomfist,375,
+Tank,Hazard,275,225
+Tank,Junker Queen,375,
+Tank,Mauga,425,150
+Tank,Orisa,150,300
+Tank,Ramattra,250,100
+Tank,Reinhardt,250,300
+Tank,Roadhog,600,
+Tank,Sigma,200,
+Tank,Winston,275,200
+Tank,Wrecking Ball,300,175
+Tank,Zarya,175,
+Damage,Ashe,250,
+Damage,Bastion,250,100
+Damage,Cassidy,250,
+Damage,Echo,150,
+Damage,Freja,225,
+Damage,Genji,250,
+Damage,Hanzo,250,
+Damage,Junkrat,250,
+Damage,Mei,300,
+Damage,Pharah,225,
+Damage,Reaper,300,
+Damage,Sojourn,225,
+Damage,Soldier: 76,250,
+Damage,Sombra,225,
+Damage,Symmetra,125,
+Damage,Torbjörn,225,75
+Damage,Tracer,175,
+Damage,Venture,250,
+Damage,Widowmaker,225,
+Support,Ana,250,
+Support,Baptiste,250,
+Support,Brigitte,200,50
+Support,Illari,250,
+Support,Juno,75,
+Support,Kiriko,225,
+Support,Lifeweaver,200,
+Support,Lúcio,225,
+Support,Mercy,225,
+Support,Moira,225,
+Support,Wuyang,225,
+Support,Zenyatta,75,
