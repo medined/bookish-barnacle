@@ -1,0 +1,30 @@
+hero_name,ability_name,damage_amplification,damage_reduction,duration
+D.Va,Role: Tank,,-25% taken,
+Doomfist,Role: Tank,,-25% taken,
+Doomfist,Power Block,,-75% taken,0.34 seconds (min) 2.5 seconds (max)
+Hazard,Role: Tank,,-25% taken,
+Hazard,Spike Guard,,-60% taken,0.3 seconds (min) 3 seconds (max)
+Junker Queen,Role: Tank,,-25% taken,
+Mauga,Role: Tank,,-25% taken,
+Mauga,Overrun,,-50% taken,"0.32 seconds (charge, min) 2 seconds (charge, max) 0.6 seconds (stomp) 1 second (knockdown)"
+Mauga,Cardiac Overdrive,,-40% taken (self),3 seconds
+Orisa,Role: Tank,,-25% taken,
+Orisa,Fortify,,-45% taken,4 seconds
+Orisa,Terra Surge,,-45% taken (Fortify),0.75 - 4 seconds (charge time)
+Ramattra,Role: Tank,,-25% taken,
+Ramattra,Block,,-75% taken,0.2 seconds (min)
+Reinhardt,Role: Tank,,-25% taken,
+Roadhog,Role: Tank,,-25% taken,
+Roadhog,Take a Breather,,-40% taken,0.4 seconds (min) 2.5 seconds (max) 1.3 seconds (energy regen delay)
+Sigma,Role: Tank,,-25% taken,
+Winston,Role: Tank,,-25% taken,
+Wrecking Ball,Role: Tank,,-25% taken,
+Zarya,Role: Tank,,-25% taken,
+Bastion,Ironclad,,-20% taken,
+Cassidy,Combat Roll,,-50% taken,0.4 seconds
+Cassidy,Deadeye,,-40% ... 0% taken,2 seconds (warning time) 7 seconds (max)
+Ana,Nano Boost,+50% dealt,-50% taken,8 seconds
+Baptiste,Amplification Matrix,+100% dealt,,10 seconds
+Juno,Orbital Ray,+30% dealt,,8 seconds
+Mercy,Caduceus Staff,+30% dealt,,
+Zenyatta,Orb of Discord,+25% taken,,1.5 seconds (if out of sight)

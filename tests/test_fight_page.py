@@ -13,6 +13,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select, WebDriverWait
 
 PAGE_URL = (Path(__file__).resolve().parent.parent / "fight.html").resolve().as_uri()
+PAGE_V2_URL = (Path(__file__).resolve().parent.parent / "fight_v2.html").resolve().as_uri()
 
 
 @pytest.fixture(scope="module")
@@ -71,3 +72,26 @@ def test_fight_button_runs_simulation(driver: WebDriver) -> None:
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#log article")))
     log_entries = driver.find_elements(By.CSS_SELECTOR, "#log article")
     assert log_entries
+
+
+def test_v2_dropdowns_populate(driver: WebDriver) -> None:
+    driver.get(PAGE_V2_URL)
+    attacker = wait_for_options(driver, "attackerSelect", minimum=5)
+    defender = wait_for_options(driver, "defenderSelect", minimum=5)
+    assert len(attacker.options) == len(defender.options)
+    assert len(attacker.options) >= 5
+
+
+def test_v2_calculates_ttk(driver: WebDriver) -> None:
+    driver.get(PAGE_V2_URL)
+    attacker = wait_for_options(driver, "attackerSelect")
+    defender = wait_for_options(driver, "defenderSelect")
+    attacker.select_by_visible_text("Ashe")
+    defender.select_by_visible_text("Tracer")
+
+    def _has_summary(drv: WebDriver):
+        el = drv.find_element(By.ID, "summary")
+        return el if el.text.strip() and "Time to kill" in el.text else False
+
+    summary = WebDriverWait(driver, 10).until(_has_summary)
+    assert "Time to kill" in summary.text
