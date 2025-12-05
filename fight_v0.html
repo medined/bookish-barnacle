@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overwatch 2 Hero Duel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #0d1117;
+        color: #e6edf3;
+        margin: 0;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 2rem;
+      }
+      p.lede {
+        color: #9da5b4;
+        margin-bottom: 24px;
+      }
+      form.controls {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        align-items: end;
+        margin-bottom: 24px;
+        background: #111926;
+        border: 1px solid #1f2a37;
+        border-radius: 12px;
+        padding: 16px;
+      }
+      form.controls label {
+        display: block;
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+        color: #9da5b4;
+      }
+      form.controls select,
+      form.controls input {
+        width: 100%;
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #293548;
+        background: #0d1117;
+        color: #e6edf3;
+      }
+      form.controls button {
+        padding: 10px 18px;
+        border-radius: 8px;
+        border: none;
+        background: #f78166;
+        color: #0d1117;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      form.controls button:hover {
+        background: #f66a4b;
+      }
+      form.controls .button-row {
+        display: flex;
+        gap: 12px;
+      }
+      form.controls .button-row button {
+        flex: 1;
+      }
+      section.hero-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .hero-card {
+        border: 1px solid #1f2a37;
+        border-radius: 10px;
+        padding: 16px;
+        background: #0b141f;
+        min-height: 150px;
+      }
+      .hero-card h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+      .hero-card span {
+        font-size: 0.85rem;
+        color: #9da5b4;
+        margin-left: 6px;
+      }
+      .hero-card p {
+        margin: 4px 0;
+        font-size: 0.9rem;
+      }
+      section.summary {
+        border: 1px solid #1f2a37;
+        border-radius: 10px;
+        padding: 16px;
+        background: #0b141f;
+        margin-bottom: 24px;
+        min-height: 60px;
+      }
+      section.summary p {
+        margin: 6px 0;
+      }
+      section.log {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 48px;
+      }
+      section.log article {
+        border: 1px solid #1f2a37;
+        border-radius: 10px;
+        padding: 14px;
+        background: #0b141f;
+      }
+      section.log h4 {
+        margin: 0 0 8px 0;
+      }
+      section.log p {
+        margin: 4px 0;
+        font-size: 0.9rem;
+      }
+      .muted {
+        color: #9da5b4;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Overwatch 2 Hero Duel</h1>
+      <p class="lede">
+        Pick two heroes using cached stats, then let them trade blows round by
+        round.
+      </p>
+      <form id="fightForm" class="controls">
+        <div class="select-group">
+          <label for="heroA">Hero 1</label
+          ><select id="heroA" required></select>
+        </div>
+        <div class="select-group">
+          <label for="heroB">Hero 2</label
+          ><select id="heroB" required></select>
+        </div>
+        <div class="select-group">
+          <label for="seedInput">Seed (optional)</label
+          ><input type="number" id="seedInput" placeholder="random" />
+        </div>
+        <div class="select-group">
+          <label for="roundsInput">Max rounds</label
+          ><input type="number" id="roundsInput" value="30" min="1" max="100" />
+        </div>
+        <div class="button-row">
+          <button type="submit">Fight!</button
+          ><button type="button" id="duelButton">Duel 100</button>
+        </div>
+      </form>
+      <section class="hero-grid">
+        <div class="hero-card" id="heroACard"></div>
+        <div class="hero-card" id="heroBCard"></div>
+      </section>
+      <section class="summary" id="summary"></section>
+      <section class="log" id="log"></section>
+    </main>
+    <script id="hero-data" type="application/json">
+      
+      [
+        {
+          "role": "Tank",
+          "name": "D.Va",
+          "url": "https://overwatch.fandom.com/wiki/D.Va",
+          "health": 375,
+          "armor": 325,
+          "weapon": {
+            "name": "Fusion Cannons",
+            "shotsPerSecond": 73,
+            "damagePerShot": 2,
+            "dpsFiring": 146,
+            "clipSize": null,
+            "reloadTime": 0,
+            "critChance": 0.1,
+            "description": "Shotgun (hitscan)"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Doomfist",
+          "url": "https://overwatch.fandom.com/wiki/Doomfist",
+          "health": 525,
+          "armor": 0,
+          "weapon": {
+            "name": "Hand Cannon",
+            "shotsPerSecond": 33,
+            "damagePerShot": 5,
+            "dpsFiring": 165,
+            "clipSize": 4,
+            "reloadTime": 0.4,
+            "critChance": 0.1,
+            "description": "Shotgun (projectile)"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Hazard",
+          "url": "https://overwatch.fandom.com/wiki/Hazard",
+          "health": 425,
+          "armor": 225,
+          "weapon": {
+            "name": "Bonespur",
+            "shotsPerSecond": 17.5,
+            "damagePerShot": 7.5,
+            "dpsFiring": 131.58,
+            "clipSize": 8,
+            "reloadTime": 2.3,
+            "critChance": 0.1,
+            "description": "Shotgun (projectile)"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Junker Queen",
+          "url": "https://overwatch.fandom.com/wiki/Junker_Queen",
+          "health": 525,
+          "armor": 0,
+          "weapon": {
+            "name": "Scattergun",
+            "shotsPerSecond": 13.3,
+            "damagePerShot": 8,
+            "dpsFiring": 106,
+            "clipSize": 8,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Shotgun (hitscan)"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Mauga",
+          "url": "https://overwatch.fandom.com/wiki/Mauga",
+          "health": 575,
+          "armor": 150,
+          "weapon": {
+            "name": "Chainguns",
+            "shotsPerSecond": 36,
+            "damagePerShot": 4,
+            "dpsFiring": 144,
+            "clipSize": 300,
+            "reloadTime": 2.2,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Orisa",
+          "url": "https://overwatch.fandom.com/wiki/Orisa",
+          "health": 300,
+          "armor": 300,
+          "weapon": {
+            "name": "Augmented Fusion Driver",
+            "shotsPerSecond": 10,
+            "damagePerShot": 14,
+            "dpsFiring": 140,
+            "clipSize": null,
+            "reloadTime": 3,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Ramattra",
+          "url": "https://overwatch.fandom.com/wiki/Ramattra",
+          "health": 400,
+          "armor": 100,
+          "weapon": {
+            "name": "Void Accelerator",
+            "shotsPerSecond": 25,
+            "damagePerShot": 5,
+            "dpsFiring": 125,
+            "clipSize": 100,
+            "reloadTime": 1,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Reinhardt",
+          "url": "https://overwatch.fandom.com/wiki/Reinhardt",
+          "health": 400,
+          "armor": 300,
+          "weapon": {
+            "name": "Rocket Hammer",
+            "shotsPerSecond": 1.04,
+            "damagePerShot": 100,
+            "dpsFiring": 104,
+            "clipSize": null,
+            "reloadTime": 0,
+            "critChance": 0,
+            "description": "Melee"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Roadhog",
+          "url": "https://overwatch.fandom.com/wiki/Roadhog",
+          "health": 750,
+          "armor": 0,
+          "weapon": {
+            "name": "Scrap Gun",
+            "shotsPerSecond": 1.25,
+            "damagePerShot": 162.504,
+            "dpsFiring": 203.13,
+            "clipSize": 6,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Shotgun (projectile)"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Sigma",
+          "url": "https://overwatch.fandom.com/wiki/Sigma",
+          "health": 350,
+          "armor": 0,
+          "weapon": {
+            "name": "Hyperspheres",
+            "shotsPerSecond": 0.67,
+            "damagePerShot": 110,
+            "dpsFiring": 73.3,
+            "clipSize": null,
+            "reloadTime": 0,
+            "critChance": 0,
+            "description": "Arcing projectile Area of effect"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Winston",
+          "url": "https://overwatch.fandom.com/wiki/Winston",
+          "health": 425,
+          "armor": 200,
+          "weapon": {
+            "name": "Tesla Cannon",
+            "shotsPerSecond": 1,
+            "damagePerShot": 70,
+            "dpsFiring": 70,
+            "clipSize": 120,
+            "reloadTime": 1.7,
+            "critChance": 0,
+            "description": "Beam (multi-target)"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Wrecking Ball",
+          "url": "https://overwatch.fandom.com/wiki/Wrecking_Ball",
+          "health": 450,
+          "armor": 175,
+          "weapon": {
+            "name": "Quad Cannons",
+            "shotsPerSecond": 25,
+            "damagePerShot": 5,
+            "dpsFiring": 125,
+            "clipSize": 80,
+            "reloadTime": 1.6,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Tank",
+          "name": "Zarya",
+          "url": "https://overwatch.fandom.com/wiki/Zarya",
+          "health": 325,
+          "armor": 0,
+          "weapon": {
+            "name": "Particle Cannon 0% charge",
+            "shotsPerSecond": 1,
+            "damagePerShot": 95,
+            "dpsFiring": 95,
+            "clipSize": 100,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Beam"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Ashe",
+          "url": "https://overwatch.fandom.com/wiki/Ashe",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "The Viper",
+            "shotsPerSecond": 3.9,
+            "damagePerShot": 35,
+            "dpsFiring": 136.5,
+            "clipSize": 12,
+            "reloadTime": 0.5,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Bastion",
+          "url": "https://overwatch.fandom.com/wiki/Bastion",
+          "health": 250,
+          "armor": 100,
+          "weapon": {
+            "name": "Configuration: Recon",
+            "shotsPerSecond": 5,
+            "damagePerShot": 25,
+            "dpsFiring": 125,
+            "clipSize": 25,
+            "reloadTime": 1.2,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Cassidy",
+          "url": "https://overwatch.fandom.com/wiki/Cassidy",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Peacekeeper",
+            "shotsPerSecond": 2,
+            "damagePerShot": 70,
+            "dpsFiring": 140,
+            "clipSize": 6,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Echo",
+          "url": "https://overwatch.fandom.com/wiki/Echo",
+          "health": 150,
+          "armor": 0,
+          "weapon": {
+            "name": "Tri-Shot",
+            "shotsPerSecond": 2.97,
+            "damagePerShot": 51,
+            "dpsFiring": 151.79,
+            "clipSize": 12,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Freja",
+          "url": "https://overwatch.fandom.com/wiki/Freja",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Revdraw Crossbow",
+            "shotsPerSecond": 4.81,
+            "damagePerShot": 25,
+            "dpsFiring": 120.19,
+            "clipSize": 15,
+            "reloadTime": 1.6,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Genji",
+          "url": "https://overwatch.fandom.com/wiki/Genji",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Shuriken",
+            "shotsPerSecond": 1.14,
+            "damagePerShot": 81,
+            "dpsFiring": 92.05,
+            "clipSize": 24,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Hanzo",
+          "url": "https://overwatch.fandom.com/wiki/Hanzo",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Storm Bow",
+            "shotsPerSecond": 0.82,
+            "damagePerShot": 125,
+            "dpsFiring": 102.46,
+            "clipSize": null,
+            "reloadTime": 0,
+            "critChance": 0.1,
+            "description": "Arcing projectile"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Junkrat",
+          "url": "https://overwatch.fandom.com/wiki/Junkrat",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Frag Launcher",
+            "shotsPerSecond": 1.5,
+            "damagePerShot": 120,
+            "dpsFiring": 180,
+            "clipSize": 5,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Arcing projectile Area of effect"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Mei",
+          "url": "https://overwatch.fandom.com/wiki/Mei",
+          "health": 300,
+          "armor": 0,
+          "weapon": {
+            "name": "Endothermic Blaster",
+            "shotsPerSecond": 20,
+            "damagePerShot": 5,
+            "dpsFiring": 100,
+            "clipSize": 140,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Beam (projectile)"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Pharah",
+          "url": "https://overwatch.fandom.com/wiki/Pharah",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Rocket Launcher",
+            "shotsPerSecond": 1.25,
+            "damagePerShot": 120,
+            "dpsFiring": 150,
+            "clipSize": 6,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Projectile Area of effect"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Reaper",
+          "url": "https://overwatch.fandom.com/wiki/Reaper",
+          "health": 300,
+          "armor": 0,
+          "weapon": {
+            "name": "Hellfire Shotguns",
+            "shotsPerSecond": 2,
+            "damagePerShot": 115,
+            "dpsFiring": 230,
+            "clipSize": 8,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Shotgun (hitscan)"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Sojourn",
+          "url": "https://overwatch.fandom.com/wiki/Sojourn",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Railgun",
+            "shotsPerSecond": 16,
+            "damagePerShot": 9,
+            "dpsFiring": 144,
+            "clipSize": 45,
+            "reloadTime": 1.2,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Soldier: 76",
+          "url": "https://overwatch.fandom.com/wiki/Soldier:_76",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Heavy Pulse Rifle",
+            "shotsPerSecond": 9,
+            "damagePerShot": 19,
+            "dpsFiring": 171,
+            "clipSize": 30,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Sombra",
+          "url": "https://overwatch.fandom.com/wiki/Sombra",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Machine Pistol",
+            "shotsPerSecond": 20,
+            "damagePerShot": 8,
+            "dpsFiring": 160,
+            "clipSize": 60,
+            "reloadTime": 1.2,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Symmetra",
+          "url": "https://overwatch.fandom.com/wiki/Symmetra",
+          "health": 125,
+          "armor": 0,
+          "weapon": {
+            "name": "Photon Projector full charge",
+            "shotsPerSecond": 1,
+            "damagePerShot": 180,
+            "dpsFiring": 180,
+            "clipSize": 100,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Beam"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Torbjorn",
+          "url": "https://overwatch.fandom.com/wiki/Torbj%C3%B6rn",
+          "health": 225,
+          "armor": 75,
+          "weapon": {
+            "name": "Rivet Gun",
+            "shotsPerSecond": 1.96,
+            "damagePerShot": 70,
+            "dpsFiring": 137.25,
+            "clipSize": 18,
+            "reloadTime": 2,
+            "critChance": 0.1,
+            "description": "Arcing projectile"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Tracer",
+          "url": "https://overwatch.fandom.com/wiki/Tracer",
+          "health": 175,
+          "armor": 0,
+          "weapon": {
+            "name": "Pulse Pistols",
+            "shotsPerSecond": 20,
+            "damagePerShot": 12,
+            "dpsFiring": 240,
+            "clipSize": 40,
+            "reloadTime": 1,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Venture",
+          "url": "https://overwatch.fandom.com/wiki/Venture",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Smart Excavator",
+            "shotsPerSecond": 1.67,
+            "damagePerShot": 75,
+            "dpsFiring": 125,
+            "clipSize": 8,
+            "reloadTime": 1.75,
+            "critChance": 0,
+            "description": "Projectile Area of effect"
+          }
+        },
+        {
+          "role": "Damage",
+          "name": "Widowmaker",
+          "url": "https://overwatch.fandom.com/wiki/Widowmaker",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Widow's Kiss",
+            "shotsPerSecond": 10,
+            "damagePerShot": 14,
+            "dpsFiring": 140,
+            "clipSize": 35,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Ana",
+          "url": "https://overwatch.fandom.com/wiki/Ana",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Biotic Rifle",
+            "shotsPerSecond": 1.25,
+            "damagePerShot": 75,
+            "dpsFiring": 93.75,
+            "clipSize": 15,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Baptiste",
+          "url": "https://overwatch.fandom.com/wiki/Baptiste",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Biotic Launcher",
+            "shotsPerSecond": 1.7,
+            "damagePerShot": 75,
+            "dpsFiring": 127.5,
+            "clipSize": 36,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Brigitte",
+          "url": "https://overwatch.fandom.com/wiki/Brigitte",
+          "health": 200,
+          "armor": 50,
+          "weapon": {
+            "name": "Rocket Flail",
+            "shotsPerSecond": 1,
+            "damagePerShot": 75,
+            "dpsFiring": 75,
+            "clipSize": null,
+            "reloadTime": 0,
+            "critChance": 0,
+            "description": "Melee"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Illari",
+          "url": "https://overwatch.fandom.com/wiki/Illari",
+          "health": 250,
+          "armor": 0,
+          "weapon": {
+            "name": "Solar Rifle",
+            "shotsPerSecond": 1.11,
+            "damagePerShot": 70,
+            "dpsFiring": 77.7,
+            "clipSize": 14,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Juno",
+          "url": "https://overwatch.fandom.com/wiki/Juno",
+          "health": 75,
+          "armor": 0,
+          "weapon": {
+            "name": "Mediblaster",
+            "shotsPerSecond": 1.29,
+            "damagePerShot": 90,
+            "dpsFiring": 116.28,
+            "clipSize": 180,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Hitscan"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Kiriko",
+          "url": "https://overwatch.fandom.com/wiki/Kiriko",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Kunai",
+            "shotsPerSecond": 0.5,
+            "damagePerShot": 60,
+            "dpsFiring": 120,
+            "clipSize": 15,
+            "reloadTime": 1,
+            "critChance": 0,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Lifeweaver",
+          "url": "https://overwatch.fandom.com/wiki/Lifeweaver",
+          "health": 200,
+          "armor": 0,
+          "weapon": {
+            "name": "Healing Blossom",
+            "shotsPerSecond": 22,
+            "damagePerShot": 6,
+            "dpsFiring": 132,
+            "clipSize": 100,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Lúcio",
+          "url": "https://overwatch.fandom.com/wiki/L%C3%BAcio",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Sonic Amplifier",
+            "shotsPerSecond": 4.28,
+            "damagePerShot": 30,
+            "dpsFiring": 85.56,
+            "clipSize": 20,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Mercy",
+          "url": "https://overwatch.fandom.com/wiki/Mercy",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Caduceus Staff1",
+            "shotsPerSecond": 5,
+            "damagePerShot": 20,
+            "dpsFiring": 100,
+            "clipSize": 25,
+            "reloadTime": 1.4,
+            "critChance": 0,
+            "description": "Projectile"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Moira",
+          "url": "https://overwatch.fandom.com/wiki/Moira",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Biotic Grasp Alt Fire",
+            "shotsPerSecond": 10,
+            "damagePerShot": 6.5,
+            "dpsFiring": 65,
+            "clipSize": null,
+            "reloadTime": 0,
+            "critChance": 0,
+            "description": "Beam"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Wuyang",
+          "url": "https://overwatch.fandom.com/wiki/Wuyang",
+          "health": 225,
+          "armor": 0,
+          "weapon": {
+            "name": "Xuanwu Staff",
+            "shotsPerSecond": 3,
+            "damagePerShot": 30,
+            "dpsFiring": 90.91,
+            "clipSize": 20,
+            "reloadTime": 1.5,
+            "critChance": 0,
+            "description": "Arcing projectile Area of effect"
+          }
+        },
+        {
+          "role": "Support",
+          "name": "Zenyatta",
+          "url": "https://overwatch.fandom.com/wiki/Zenyatta",
+          "health": 75,
+          "armor": 0,
+          "weapon": {
+            "name": "Orb of Destruction",
+            "shotsPerSecond": 2.5,
+            "damagePerShot": 50,
+            "dpsFiring": 125,
+            "clipSize": 25,
+            "reloadTime": 1.5,
+            "critChance": 0.1,
+            "description": "Projectile"
+          }
+        }
+      ]
+    </script>
+    <script>
+      (function () {
+        const HERO_DATA = JSON.parse(
+          document.getElementById("hero-data").textContent,
+        );
+        const heroes = [...HERO_DATA].sort((a, b) =>
+          a.name.localeCompare(b.name),
+        );
+        const heroMap = new Map(heroes.map((hero) => [hero.name, hero]));
+        const heroASelect = document.getElementById("heroA");
+        const heroBSelect = document.getElementById("heroB");
+        const seedInput = document.getElementById("seedInput");
+        const roundsInput = document.getElementById("roundsInput");
+        const summaryEl = document.getElementById("summary");
+        const logEl = document.getElementById("log");
+        const heroACard = document.getElementById("heroACard");
+        const heroBCard = document.getElementById("heroBCard");
+        const fightForm = document.getElementById("fightForm");
+        const duelButton = document.getElementById("duelButton");
+        populateSelect(heroASelect);
+        populateSelect(heroBSelect);
+        if (heroBSelect.options.length > 1) {
+          heroBSelect.selectedIndex = 1;
+        }
+        renderHeroCards();
+        fightForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          runFight();
+        });
+        duelButton.addEventListener("click", (event) => {
+          event.preventDefault();
+          runDuelSeries(100);
+        });
+        heroASelect.addEventListener("change", renderHeroCards);
+        heroBSelect.addEventListener("change", renderHeroCards);
+        function populateSelect(select) {
+          const roles = {};
+          heroes.forEach((hero) => {
+            roles[hero.role] = roles[hero.role] || [];
+            roles[hero.role].push(hero);
+          });
+          Object.keys(roles)
+            .sort()
+            .forEach((role) => {
+              roles[role].sort((a, b) => a.name.localeCompare(b.name));
+              const group = document.createElement("optgroup");
+              group.label = role;
+              roles[role].forEach((hero) => {
+                const option = document.createElement("option");
+                option.value = hero.name;
+                option.textContent = hero.name;
+                group.appendChild(option);
+              });
+              select.appendChild(group);
+            });
+        }
+        function renderHeroCards() {
+          renderHeroCard(heroMap.get(heroASelect.value), heroACard, "Hero 1");
+          renderHeroCard(heroMap.get(heroBSelect.value), heroBCard, "Hero 2");
+        }
+        function renderHeroCard(hero, container, label) {
+          if (!hero) {
+            container.innerHTML = '<p class="muted">Select a hero</p>';
+            return;
+          }
+          const weapon = hero.weapon;
+          const clip =
+            typeof weapon.clipSize === "number" ? weapon.clipSize : "∞";
+          container.innerHTML = `<h3>${label}: ${hero.name}<span>${hero.role}</span></h3>
+<p>Health: ${hero.health.toFixed(0)} | Armor: ${hero.armor.toFixed(0)}</p>
+<p>Weapon: ${weapon.name} (${weapon.description || "unknown"})</p>
+<p>DPS: ${weapon.dpsFiring.toFixed(1)} | Shots/s: ${weapon.shotsPerSecond.toFixed(2)}</p>
+<p>Damage/shot: ${weapon.damagePerShot.toFixed(2)} | Clip: ${clip}</p>`;
+        }
+        function runFight() {
+          const context = prepareContext();
+          if (!context) {
+            return;
+          }
+          const sim = simulateFight(
+            context.heroA,
+            context.heroB,
+            context.rng,
+            context.maxRounds,
+          );
+          renderSummary(context.heroA, context.heroB, sim);
+          renderLog(sim.rounds);
+        }
+        function runDuelSeries(count) {
+          const context = prepareContext();
+          if (!context) {
+            return;
+          }
+          const stats = { winsA: 0, winsB: 0, draws: 0, stalemates: 0 };
+          let lastSim = null;
+          for (let i = 0; i < count; i += 1) {
+            const sim = simulateFight(
+              context.heroA,
+              context.heroB,
+              context.rng,
+              context.maxRounds,
+            );
+            lastSim = sim;
+            if (sim.result === "A") {
+              stats.winsA += 1;
+            } else if (sim.result === "B") {
+              stats.winsB += 1;
+            } else if (sim.result === "draw") {
+              stats.draws += 1;
+            } else {
+              stats.stalemates += 1;
+            }
+          }
+          renderSeriesSummary(context.heroA, context.heroB, stats, count);
+          if (lastSim) {
+            renderLog(lastSim.rounds, {
+              note: `Showing rounds from duel #${count}`,
+            });
+          } else {
+            renderLog([], { note: "No duels played." });
+          }
+        }
+        function prepareContext() {
+          const heroA = heroMap.get(heroASelect.value);
+          const heroB = heroMap.get(heroBSelect.value);
+          if (!heroA || !heroB) {
+            summaryEl.textContent = "Pick two heroes to start.";
+            logEl.innerHTML = "";
+            return null;
+          }
+          if (heroA.name === heroB.name) {
+            summaryEl.textContent = "Pick two different heroes to fight.";
+            logEl.innerHTML = "";
+            return null;
+          }
+          const maxRounds = Math.max(
+            1,
+            Math.min(100, Number(roundsInput.value) || 30),
+          );
+          const seedValue = seedInput.value.trim();
+          const rng =
+            seedValue !== "" ? mulberry32(Number(seedValue) || 0) : null;
+          return { heroA, heroB, maxRounds, rng };
+        }
+        function mulberry32(seed) {
+          let a = seed >>> 0;
+          return function () {
+            a |= 0;
+            a = (a + 0x6d2b79f5) | 0;
+            let t = Math.imul(a ^ (a >>> 15), 1 | a);
+            t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+            return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+          };
+        }
+        function createFighter(hero) {
+          return {
+            hero,
+            health: hero.health,
+            armor: hero.armor,
+            maxHealth: hero.health,
+            maxArmor: hero.armor,
+            weapon: hero.weapon,
+            ammo:
+              typeof hero.weapon.clipSize === "number"
+                ? hero.weapon.clipSize
+                : null,
+            reloadTimer: 0,
+            tookDamage: false,
+          };
+        }
+        function performAttack(state, rand) {
+          if (state.health <= 0) {
+            return { damage: 0, note: "Eliminated" };
+          }
+          if (state.reloadTimer > 0) {
+            state.reloadTimer = Math.max(0, state.reloadTimer - 1);
+            if (
+              state.reloadTimer === 0 &&
+              typeof state.weapon.clipSize === "number"
+            ) {
+              state.ammo = state.weapon.clipSize;
+            }
+            return { damage: 0, note: "Reloading" };
+          }
+          const shotsPerSecond = state.weapon.shotsPerSecond;
+          const notes = [];
+          let damage = 0;
+          if (shotsPerSecond <= 0 && state.weapon.dpsFiring > 0) {
+            damage = state.weapon.dpsFiring;
+            notes.push("sustained DPS");
+          } else {
+            let shotsFired = 0;
+            if (typeof state.weapon.clipSize !== "number") {
+              shotsFired = shotsPerSecond;
+            } else {
+              if (state.ammo == null) {
+                state.ammo = state.weapon.clipSize;
+              }
+              const available = Math.min(state.ammo, shotsPerSecond);
+              shotsFired = Math.max(0, available);
+              state.ammo -= available;
+              if (state.ammo <= 0 && state.weapon.reloadTime > 0) {
+                state.reloadTimer = state.weapon.reloadTime;
+                state.ammo = 0;
+                notes.push("clip empty");
+              }
+            }
+            damage = Math.max(0, shotsFired) * state.weapon.damagePerShot;
+            if (typeof state.weapon.clipSize === "number") {
+              notes.push(`${shotsFired.toFixed(1)} shots`);
+            }
+          }
+          const rng = rand || Math.random;
+          if (state.weapon.critChance > 0 && rng() < state.weapon.critChance) {
+            damage *= 2;
+            notes.push("CRIT");
+          }
+          if (state.hero.role.toLowerCase() === "damage") {
+            damage *= 1.05;
+            notes.push("+5% DPS passive");
+          }
+          return {
+            damage,
+            note: notes.length ? notes.join(", ") : "standard fire",
+          };
+        }
+        function applyDamage(state, incoming) {
+          if (state.health <= 0 || incoming <= 0) {
+            state.tookDamage = false;
+            return { taken: 0, armorBroken: false };
+          }
+          let armorBroken = false;
+          let effective = incoming;
+          if (state.armor > 0) {
+            effective *= 0.7;
+            const absorbed = Math.min(state.armor, effective);
+            state.armor -= absorbed;
+            state.health -= effective - absorbed;
+            armorBroken = state.armor === 0 && absorbed > 0;
+          } else if (state.hero.role.toLowerCase() === "tank") {
+            effective *= 0.9;
+            state.health -= effective;
+          } else {
+            state.health -= effective;
+          }
+          state.health = Math.max(0, state.health);
+          state.tookDamage = effective > 0;
+          return { taken: effective, armorBroken };
+        }
+        function applySupportRegen(state) {
+          if (state.hero.role.toLowerCase() !== "support") {
+            return null;
+          }
+          if (state.tookDamage || state.health <= 0) {
+            return null;
+          }
+          const missing = state.maxHealth - state.health;
+          if (missing <= 0) {
+            return null;
+          }
+          const heal = Math.min(15, missing);
+          state.health = Math.min(state.maxHealth, state.health + heal);
+          return heal;
+        }
+        function simulateFight(heroA, heroB, rand, maxRounds) {
+          const fighterA = createFighter(heroA);
+          const fighterB = createFighter(heroB);
+          const randomFn = typeof rand === "function" ? rand : null;
+          const rounds = [];
+          let roundNumber = 1;
+          while (
+            fighterA.health > 0 &&
+            fighterB.health > 0 &&
+            roundNumber <= maxRounds
+          ) {
+            const attackA = performAttack(fighterA, randomFn);
+            const attackB = performAttack(fighterB, randomFn);
+            const toB = applyDamage(fighterB, attackA.damage);
+            const toA = applyDamage(fighterA, attackB.damage);
+            const regenB = applySupportRegen(fighterB);
+            const regenA = applySupportRegen(fighterA);
+            rounds.push({
+              round: roundNumber,
+              first: {
+                attacker: heroA.name,
+                target: heroB.name,
+                damage: toB.taken,
+                note: attackA.note,
+                targetHealth: fighterB.health,
+                targetArmor: fighterB.armor,
+                armorBroken: toB.armorBroken,
+                regen: regenB,
+              },
+              second: {
+                attacker: heroB.name,
+                target: heroA.name,
+                damage: toA.taken,
+                note: attackB.note,
+                targetHealth: fighterA.health,
+                targetArmor: fighterA.armor,
+                armorBroken: toA.armorBroken,
+                regen: regenA,
+              },
+            });
+            roundNumber += 1;
+          }
+          let outcome = "Stalemate reached — maximum rounds exceeded.";
+          let result = "stalemate";
+          if (fighterA.health > 0 && fighterB.health <= 0) {
+            outcome = `${heroA.name} wins with ${fighterA.health.toFixed(1)} HP remaining.`;
+            result = "A";
+          } else if (fighterB.health > 0 && fighterA.health <= 0) {
+            outcome = `${heroB.name} wins with ${fighterB.health.toFixed(1)} HP remaining.`;
+            result = "B";
+          } else if (fighterA.health <= 0 && fighterB.health <= 0) {
+            outcome = "Both heroes fall simultaneously — it's a draw!";
+            result = "draw";
+          } else if (roundNumber - 1 < maxRounds) {
+            outcome = "Fight interrupted.";
+            result = "stalemate";
+          }
+          return { rounds, outcome, result };
+        }
+        function renderSummary(heroA, heroB, sim) {
+          summaryEl.innerHTML = `<p><strong>${heroA.name}</strong> vs <strong>${heroB.name}</strong></p><p>${sim.outcome}</p>`;
+        }
+        function renderSeriesSummary(heroA, heroB, stats, total) {
+          const pct = (a) => ((a / total) * 100).toFixed(1);
+          let summary = `<p><strong>${heroA.name}</strong> vs <strong>${heroB.name}</strong> — ${total} duels</p>`;
+          summary += `<p>${heroA.name}: ${stats.winsA} wins (${pct(stats.winsA)}%)</p>`;
+          summary += `<p>${heroB.name}: ${stats.winsB} wins (${pct(stats.winsB)}%)</p>`;
+          summary += `<p>Draws: ${stats.draws}</p>`;
+          if (stats.stalemates) {
+            summary += `<p>Stalemates: ${stats.stalemates}</p>`;
+          }
+          summaryEl.innerHTML = summary;
+        }
+        function renderLog(rounds, options = {}) {
+          const note = options.note;
+          logEl.innerHTML = "";
+          if (note) {
+            const noteEl = document.createElement("p");
+            noteEl.className = "muted";
+            noteEl.textContent = note;
+            logEl.appendChild(noteEl);
+          }
+          if (!rounds.length) {
+            const empty = document.createElement("p");
+            empty.className = "muted";
+            empty.textContent = "No rounds played.";
+            logEl.appendChild(empty);
+            return;
+          }
+          rounds.forEach((entry) => {
+            const card = document.createElement("article");
+            addText(card, "h4", `Round ${entry.round}`);
+            addText(card, "p", formatLine(entry.first));
+            if (entry.first.armorBroken) {
+              addText(card, "p", `${entry.first.target}'s armor breaks!`, true);
+            }
+            if (entry.first.regen) {
+              addText(
+                card,
+                "p",
+                `${entry.first.target} regains ${entry.first.regen.toFixed(1)} HP from Support passive.`,
+                true,
+              );
+            }
+            addText(card, "p", formatLine(entry.second));
+            if (entry.second.armorBroken) {
+              addText(
+                card,
+                "p",
+                `${entry.second.target}'s armor breaks!`,
+                true,
+              );
+            }
+            if (entry.second.regen) {
+              addText(
+                card,
+                "p",
+                `${entry.second.target} regains ${entry.second.regen.toFixed(1)} HP from Support passive.`,
+                true,
+              );
+            }
+            logEl.appendChild(card);
+          });
+        }
+        function addText(parent, tag, text, muted = false) {
+          const el = document.createElement(tag);
+          el.textContent = text;
+          if (muted) {
+            el.classList.add("muted");
+          }
+          parent.appendChild(el);
+        }
+        function formatLine(info) {
+          return `${info.attacker} deals ${info.damage.toFixed(1)} dmg (${info.note}) → ${info.target} HP ${info.targetHealth.toFixed(1)} / Armor ${info.targetArmor.toFixed(1)}`;
+        }
+      })();
+    </script>
+  </body>
+</html>
