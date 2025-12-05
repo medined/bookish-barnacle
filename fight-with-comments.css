@@ -1,0 +1,202 @@
+/* Theme tokens for the dark UI; referenced by the rest of the CSS. */
+:root {
+  color-scheme: dark;
+  --bg: #0c1116;
+  --panel: #0f1823;
+  --border: #1f2937;
+  --muted: #97a0b4;
+  --accent: #9bdbff;
+  --accent-strong: #4dc2ff;
+  --text: #e6edf3;
+  --danger: #f66a4b;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    "Segoe UI",
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  /* Soft gradient background instead of a flat color. */
+  background: radial-gradient(
+    circle at 20% 20%,
+    #132034 0,
+    #0c131e 35%,
+    #0b1119 70%
+  );
+  color: var(--text);
+}
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+header h1 {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+  letter-spacing: 0.01em;
+}
+header p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+.panel {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 16px;
+}
+form.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+form label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+select,
+button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  background: #0c1116;
+  color: var(--text);
+  font-size: 1rem;
+}
+button {
+  background: var(--accent);
+  color: #04111d;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+  box-shadow: 0 6px 18px rgba(77, 194, 255, 0.2);
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(77, 194, 255, 0.28);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.hero-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hero-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: #0c131d;
+}
+.hero-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+.hero-card .hero-name {
+  color: #ffd54f;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.hero-card .hero-role {
+  font-size: 0.65em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.hero-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-left: 6px;
+}
+.hero-card p {
+  margin: 2px 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.abilities-block label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.ability-toggles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+.ability-button {
+  border: 1px solid var(--border);
+  background: #0c1116;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease;
+  width: 100%;
+}
+.ability-button.active {
+  background: rgba(255, 213, 79, 0.18);
+  border-color: #ffd54f;
+  color: #ffd54f;
+}
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 6px;
+}
+.metric {
+  border: 1px solid #33405a;
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, #0f2037 0%, #0c141f 60%, #0b1119 100%);
+  box-shadow: 0 10px 24px rgba(15, 32, 55, 0.35);
+}
+.metric h4 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.metric strong {
+  font-size: 1.2rem;
+}
+.metric.flash {
+  animation: flash 0.6s ease;
+}
+@keyframes flash {
+  0% {
+    background: rgba(246, 106, 75, 0.3);
+    color: #f66a4b;
+  }
+  100% {
+    background: rgba(255, 213, 79, 0.15);
+    color: #ffd54f;
+  }
+}
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.warning {
+  color: var(--danger);
+}
